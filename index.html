@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Alle Casio-EDIFICE-Uhren mit allen Farben, Preisen, Maßen, Werk und Funktionen – inoffizielle Übersicht.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>EDIFICE Übersicht</title>
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f4f0; --surface:#ffffff; --sunk:#ecebe6; --ink:#151515; --ink2:#3d3d3d; --muted:#76746e;
+  --line:#e2e0da; --accent:#c8102e; --accent-ink:#fff; --ok:#2e6b3f; --warn:#9a5b00;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 6px 24px rgba(0,0,0,.06);
+  /* Fotos haben weißen Grund: die Bildfläche bleibt in beiden Themes eine weiße „Plate“ */
+  --plate:#ffffff; --plate-line:#e4e2dc; --badge:#151515; --badge-ink:#ffffff; --bt:#1f4fa3; --heart:#c8102e; --scrim:rgba(10,10,10,.55);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#121212; --surface:#1b1b1b; --sunk:#232323; --ink:#f1f0ec; --ink2:#cfcdc7; --muted:#9a978f;
+  --line:#2e2d2a; --accent:#ff4d5e; --accent-ink:#111; --ok:#6fc28a; --warn:#e3a54a; --shadow:none; --plate:#ffffff; --plate-line:#3a3936; --badge:#0d0d0d; --bt:#2f62c4; --heart:#e0233f; color-scheme:dark; }}
+:root[data-theme="dark"]{ --bg:#121212; --surface:#1b1b1b; --sunk:#232323; --ink:#f1f0ec; --ink2:#cfcdc7; --muted:#9a978f;
+  --line:#2e2d2a; --accent:#ff4d5e; --accent-ink:#111; --ok:#6fc28a; --warn:#e3a54a; --shadow:none; --plate:#ffffff; --plate-line:#3a3936; --badge:#0d0d0d; --bt:#2f62c4; --heart:#e0233f; color-scheme:dark; }
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "Instrument Sans",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:Archivo,"Instrument Sans",sans-serif;font-stretch:85%;letter-spacing:-.01em}
+.num{font-variant-numeric:tabular-nums}
+a{color:inherit}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:25;background:var(--bg)}
+header.top{padding:40px 0 24px;border-bottom:1px solid var(--line)}
+.eyebrow{font:600 12px/1 "Instrument Sans",system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+header.top h1{font-size:clamp(34px,5vw,56px);line-height:1;margin:10px 0 12px;font-weight:800}
+header.top p{margin:0;color:var(--ink2);max-width:760px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:22px}
+.stat b{display:block;font:700 26px/1 Archivo,sans-serif;font-stretch:85%}
+.stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+.toolbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.tb{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:12px 0}
+.search{flex:1 1 220px;min-width:180px;position:relative}
+.search input{width:100%;height:38px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:0 12px;font:inherit}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;color:var(--ink2);font:500 13px "Instrument Sans",system-ui,sans-serif;padding:0 12px;height:36px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.chk{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);cursor:pointer;user-select:none;height:36px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.chk input{accent-color:var(--accent)}
+.fbtn{display:none}
+.filters{display:contents}
+select{height:38px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:13px;padding:0 8px}
+.count{font-size:13px;color:var(--muted);margin-left:auto}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;padding:24px 0 40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.card .pic{position:relative;background:var(--plate);aspect-ratio:1/1;display:grid;place-items:center;cursor:zoom-in}
+.card .pic img{color:transparent;width:86%;height:86%;object-fit:contain}
+.badges{position:absolute;left:10px;top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.bdg{font:600 10.5px/1 "Instrument Sans",system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 7px;border-radius:5px;background:var(--badge);color:var(--badge-ink)}
+.bdg.new{background:var(--heart)}
+.bdg.out{background:var(--plate-line);color:var(--badge)}
+.bdg.bt{background:var(--bt)}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{margin:0;font-size:22px;font-weight:750;line-height:1.1}
+.type{font-size:12.5px;color:var(--muted)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.price{font:700 19px Archivo,sans-serif;font-stretch:90%}
+.price small{font:400 12px "Instrument Sans",system-ui,sans-serif;color:var(--muted)}
+.vcode{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.keys div{padding:7px 8px;border-right:1px solid var(--line)}
+.keys div:last-child{border-right:0}
+.keys b{display:block;font:650 14px Archivo,sans-serif;font-stretch:90%}
+.keys span{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.sw{display:flex;flex-wrap:wrap;gap:7px}
+.sw button{width:26px;height:26px;border-radius:50%;cursor:pointer;padding:0;border:2px solid var(--surface);outline:1px solid var(--line);position:relative}
+.sw button[aria-pressed="true"]{outline:2px solid var(--ink);outline-offset:1px}
+.sw button.out::after{content:"";position:absolute;inset:-2px;border-radius:50%;background:linear-gradient(135deg,transparent 46%,var(--muted) 47%,var(--muted) 53%,transparent 54%)}
+.ben{font-size:13.5px;color:var(--ink2);margin:0}
+.actions{display:flex;gap:8px;margin-top:auto;padding-top:4px}
+.btn{height:36px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 13px "Instrument Sans",system-ui,sans-serif;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.btn:focus-visible,.seg button:focus-visible,.sw button:focus-visible,.heart:focus-visible,.tabs button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.empty{padding:60px 0;text-align:center;color:var(--muted)}
+.tabs{display:flex;gap:4px;padding-top:22px;border-bottom:1px solid var(--line)}
+.tabs button{border:0;background:none;color:var(--muted);font:600 15px "Instrument Sans",system-ui,sans-serif;padding:10px 14px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;display:inline-flex;gap:8px;align-items:center}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs .n{font:600 11px "Instrument Sans",system-ui,sans-serif;background:var(--sunk);color:var(--ink2);border-radius:20px;padding:2px 7px}
+.tabs button[aria-selected="true"] .n{background:var(--accent);color:var(--accent-ink)}
+.heart{position:absolute;right:8px;top:8px;width:44px;height:44px;border-radius:50%;border:1px solid var(--plate-line);background:var(--plate);cursor:pointer;display:grid;place-items:center;padding:0;z-index:2}
+.heart svg{width:21px;height:21px;fill:none;stroke:var(--badge);stroke-width:1.8;transition:transform .15s}
+.heart[aria-pressed="true"] svg{fill:var(--heart);stroke:var(--heart)}
+.heart:active svg{transform:scale(.85)}
+.sw button.fav::before{content:"";position:absolute;right:-4px;top:-4px;width:9px;height:9px;border-radius:50%;background:var(--heart);border:1.5px solid var(--surface)}
+.btn.heartbtn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.favhint{font-size:13px;color:var(--muted);margin:14px 0 0}
+
+/* modal */
+dialog{border:0;padding:0;border-radius:16px;max-width:min(1080px,96vw);width:100%;background:var(--surface);color:var(--ink);box-shadow:0 20px 80px rgba(0,0,0,.35)}
+dialog::backdrop{background:var(--scrim)}
+.mwrap{display:grid;grid-template-columns:1.05fr 1fr;max-height:90vh}
+.mgal{background:var(--plate);padding:18px;display:flex;flex-direction:column;gap:10px;overflow:auto}
+.mgal .main{aspect-ratio:1/1;display:grid;place-items:center}
+.mgal .main img{max-width:100%;max-height:100%;object-fit:contain}
+.thumbs{display:flex;gap:8px}
+.thumbs button{width:64px;height:64px;border:1px solid var(--plate-line);border-radius:8px;background:var(--plate);padding:3px;cursor:pointer}
+.thumbs button[aria-pressed="true"]{border-color:var(--badge);border-width:2px}
+.thumbs img{width:100%;height:100%;object-fit:cover;border-radius:5px}
+.minfo{padding:22px 24px;overflow:auto}
+.minfo h2{margin:0;font-size:32px;line-height:1.05}
+.close{position:sticky;top:0;float:right;border:0;background:var(--sunk);color:var(--ink);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px}
+.vlist{display:flex;flex-direction:column;gap:6px;margin:14px 0}
+.vbtn{display:grid;grid-template-columns:26px 1fr auto;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);padding:7px 10px;cursor:pointer;font:inherit;font-size:13px}
+.vbtn[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.vbtn .dot{width:22px;height:22px;border-radius:50%;border:2px solid var(--surface);outline:1px solid var(--line)}
+.vbtn small{color:var(--muted)}
+table.spec{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0 14px}
+table.spec th{text-align:left;font-weight:500;color:var(--muted);padding:7px 10px 7px 0;width:38%;vertical-align:top;border-top:1px solid var(--line)}
+table.spec td{padding:7px 0;border-top:1px solid var(--line)}
+h4{font:700 12px "Instrument Sans",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:18px 0 6px}
+ul.fn{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+ul.fn li{font-size:12.5px;background:var(--sunk);border-radius:6px;padding:4px 8px}
+.fit{display:flex;gap:10px;align-items:flex-start;background:var(--sunk);border-radius:10px;padding:10px 12px;font-size:13.5px}
+.fit b{white-space:nowrap}
+.stock{font-size:12.5px;font-weight:600}
+.stock.ok{color:var(--ok)} .stock.no{color:var(--warn)}
+
+/* compare */
+.cbar{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(140%);transition:transform .25s;z-index:30;background:var(--ink);color:var(--bg);border-radius:12px;padding:10px 12px 10px 16px;display:flex;gap:12px;align-items:center;box-shadow:var(--shadow);max-width:calc(100vw - 32px)}
+.cbar.show{transform:translateX(-50%) translateY(0)}
+.cbar .names{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52vw}
+.cbar .btn{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.cbar .x{background:none;border:0;color:var(--bg);opacity:.7;cursor:pointer;font-size:13px}
+.ctable{overflow:auto;padding:22px}
+.ctable table{border-collapse:collapse;font-size:13px;min-width:600px;width:100%}
+.ctable th,.ctable td{border-top:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+.ctable thead th{border-top:0}
+.ctable tbody th{color:var(--muted);font-weight:500;width:150px}
+.ctable img{width:120px;height:120px;object-fit:contain;background:var(--plate);border-radius:8px}
+
+/* guide */
+.guide{border-top:1px solid var(--line);padding:32px 0 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.guide h3{margin:0 0 8px;font-size:20px}
+.guide p,.guide li{font-size:14px;color:var(--ink2)}
+.guide ul{padding-left:18px;margin:0}
+.src{font-size:12px;color:var(--muted);padding-bottom:40px}
+.theme{position:absolute;right:24px;top:24px}
+@media (max-width:820px){ .mwrap{grid-template-columns:1fr;max-height:none} dialog{overflow:auto} .count{margin-left:0} }
+@media (max-width:820px){
+  .fbtn{display:inline-flex}
+  .filters{display:none;flex-basis:100%;flex-wrap:wrap;gap:8px}
+  .filters.open{display:flex}
+  .seg{flex-basis:100%;display:flex} .seg button{flex:1;padding:0 4px}
+  .filters select{flex:1 1 45%}
+  .count{flex-basis:100%;text-align:left}
+  dialog{width:100vw;max-width:100vw;height:100%;max-height:100%;border-radius:0;margin:0}
+  dialog .minfo{padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+  .mgal{padding-top:calc(18px + env(safe-area-inset-top,0px))}
+  .close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));float:none;z-index:5;width:40px;height:40px}
+  .ctable{padding-top:calc(60px + env(safe-area-inset-top,0px))}
+}
+@media (max-width:480px){ .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))} .grid{grid-template-columns:1fr} .keys b{font-size:13px} header.top{padding-block:28px 20px} .stats{display:grid;grid-template-columns:1fr 1fr;gap:16px} .stat b{font-size:22px} }
+@media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="position:relative">
+    <div class="eyebrow">Inoffizielle Übersicht · Casio EDIFICE</div>
+    <h1>Alle EDIFICE-Uhren im Überblick</h1>
+    <p>Komplettes aktuelles Sortiment des deutschen Casio-Shops – jede Uhr nur einmal, alle Farben darunter anklickbar. Preise, Gehäusegröße, Bandlänge, Werk, Funktionen und Handgelenk-Empfehlung auf einen Blick.</p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap tb">
+    <div class="search"><input id="q" type="search" placeholder="Suchen: Modell, Farbe, Funktion …" aria-label="Suchen"></div>
+    <button class="btn fbtn" id="fbtn" aria-expanded="false" aria-controls="filters">Filter</button>
+    <div class="filters" id="filters">
+    <div class="seg" id="mv" role="group" aria-label="Werk">
+      <button data-v="" aria-pressed="true">Alle</button><button data-v="Quarz">Quarz</button><button data-v="Solar">Solar</button><button data-v="Tough Solar">Tough Solar</button><button data-v="Automatik">Automatik</button>
+    </div>
+    <select id="typ" aria-label="Art"><option value="">Alle Arten</option><option value="3z">3-Zeiger</option><option value="chrono">Chronograph</option><option value="ad">Analog-Digital</option></select>
+    <select id="size" aria-label="Gehäusegröße"><option value="">Jede Größe</option><option value="s">Ø bis 40 mm</option><option value="m">Ø 40–45 mm</option><option value="l">Ø über 45 mm</option></select>
+    <select id="wrist" aria-label="Handgelenk"><option value="">Jedes Handgelenk</option><option value="1">schmal (≈15–16 cm)</option><option value="2">mittel (≈16–18 cm)</option><option value="3">kräftig (ab ≈18 cm)</option></select>
+    <label class="chk"><input type="checkbox" id="fbt"> Bluetooth</label>
+    <label class="chk"><input type="checkbox" id="fsg"> Saphirglas</label>
+    <label class="chk"><input type="checkbox" id="favail"> lieferbar</label>
+    <select id="sort" aria-label="Sortierung"><option value="price">Preis ↑</option><option value="-price">Preis ↓</option><option value="size">Größe ↑</option><option value="-size">Größe ↓</option><option value="thin">Flachste zuerst</option><option value="colors">Meiste Farben</option><option value="new">Neuheiten zuerst</option></select>
+    </div>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tabAll" aria-selected="true">Alle Uhren</button>
+    <button role="tab" id="tabFav" aria-selected="false"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.7 1.1 5.2 3 1.5-1.9 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>Gemerkt <span class="n" id="favN">0</span></button>
+  </div>
+  <p class="favhint" id="favHint" hidden>Jede gemerkte Farbe erscheint hier einzeln. <span id="syncNote">Die Liste wird nur in diesem Browser gespeichert.</span></p>
+  <div class="grid" id="grid"></div>
+
+  <section class="guide">
+    <div>
+      <h3>Werke erklärt</h3>
+      <ul>
+        <li><b>Quarz</b> – Batterie, sehr genau (±15–30 Sek./Monat), Batteriewechsel alle 2–3 Jahre (EFV-C120: 10 Jahre).</li>
+        <li><b>Solar</b> – Licht lädt einen Akku, kein Batteriewechsel. Läuft voll geladen ca. 5–6 Monate im Dunkeln.</li>
+        <li><b>Tough Solar</b> – Casios stärkeres Solarsystem mit Stromsparmodus (bis 18–19 Monate). Bei Edifice immer mit Bluetooth kombiniert.</li>
+        <li><b>Automatik</b> – Mechanisch, zieht sich durch Armbewegung auf (ca. 40–42 Std. Gangreserve), Werk durch Glasboden sichtbar. Weniger genau als Quarz (−20 bis +40 Sek./Tag), dafür „echte“ Uhrmacherei.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Größen lesen</h3>
+      <ul>
+        <li><b>Ø</b> = Gehäusebreite (das, was man als „Uhrengröße“ meint).</li>
+        <li><b>L</b> = Länge von Bandanstoß zu Bandanstoß. Sie sollte nicht über dein Handgelenk hinausragen – wichtiger als der Ø.</li>
+        <li><b>H</b> = Höhe/Dicke. Unter 10 mm passt unter jede Hemdmanschette.</li>
+        <li><b>Bandlänge</b> = Casios Angabe „Kompatible Bandgröße“, also Handgelenk-Umfang, auf den das Band (ggf. nach Kürzen) passt. Stahlbänder kürzt jeder Uhrmacher.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Handgelenk-Empfehlung</h3>
+      <p>Faustregel nach Länge L (keine Casio-Angabe):</p>
+      <ul>
+        <li>L bis 46 mm → schmal bis mittel (ab ≈15 cm)</li>
+        <li>L 46–49 mm → mittel (≈16–19 cm)</li>
+        <li>L 49–52 mm → mittel bis kräftig (ab ≈17 cm)</li>
+        <li>L über 52 mm → kräftig (ab ≈18 cm)</li>
+      </ul>
+      <p>Handgelenk messen: Papierstreifen eng um das Handgelenk legen, markieren, ausmessen.</p>
+    </div>
+  </section>
+  <p class="src">Private, inoffizielle Übersicht – nicht von Casio. Quelle: casio.com/de – Produktliste und Datenblätter, abgerufen am 18.10.2026. Preise = Casio-Onlineshop (UVP), bei Händlern oft günstiger. „Ausverkauft“ bezieht sich auf den Casio-Shop. Fotos: casio.com. Angaben ohne Gewähr.</p>
+</main>
+
+<dialog id="dlg"></dialog>
+<dialog id="cdlg"></dialog>
+<div class="cbar" id="cbar"><span class="names" id="cnames"></span><button class="btn" id="cgo">Vergleichen</button><button class="x" id="cclr">Leeren</button></div>
+
+<script>
+// Private, inoffizielle Übersicht – nicht von Casio. Quelle: casio.com/de (Produktliste + Datenblätter), abgerufen am 18.10.2026
+// Variante: [Code, Preis €, "Zifferblatt/Lünette/Band", Bildordner, "Bild1,Bild2,Bild3", ausverkauft(1/0), Label]
+const SOLAR5 = "ca. 5 Monate ohne Licht (voll geladen)";
+const B3 = "Batterie SR920SW · ca. 3 Jahre";
+const B2 = "Batterie SR920SW · ca. 2 Jahre";
+const A20 = "±20 Sek./Monat";
+const ST = "Edelstahl", SB = "Edelstahlband (Faltschließe)", LB = "Echtlederband", MG = "Mineralglas", SG = "Saphirglas", SGA = "Saphirglas, entspiegelt";
+const BT_FN = ["Bluetooth: automatische Zeitkorrektur über die App CASIO WATCHES"];
+
+const FAMILIES = [
+{ id:"efr-109", n:"EFR-109", t:"3-Zeiger", mv:"Quarz", disp:"Analog", isNew:1,
+  ben:"Neuheit (Okt. 2026): kompakte 38 mm im Vintage-Sportwagen-Look mit gewölbtem Glas – sehr flach (9,8 mm) und eine der günstigsten Edifice.",
+  fn:["3 Zeiger (Std., Min., Sek.)","Datumsanzeige bei 3 Uhr"],
+  d:{s:[45.3,38,9.8], mat:ST, gl:"Mineralglas, gewölbt", wr:"10 bar", pow:B3, acc:A20},
+  m:{
+   "EFR-109D":{w:97, band:SB, br:[150,205], v:[
+     ["EFR-109D-1A",119,"black/silver/silver","E/EF/EFR/efr-109d-1a","EFR-109D-1A.png,EFR-109D-1A_ToyotaMuseum2.jpg,EFR-109D-1A_ToyotaMuseum3.jpg",0,"NEU"],
+     ["EFR-109D-2A",119,"blue/silver/silver","E/EF/EFR/efr-109d-2a","EFR-109D-2A.png,EFR-109D-2A_ToyotaMuseum3.jpg,EFR-109D-2A_ToyotaMuseum5.jpg",0,"NEU"],
+     ["EFR-109D-3A",119,"green/silver/silver","E/EF/EFR/efr-109d-3a","EFR-109D-3A.png,EFR-109D-3A_ToyotaMuseum2.jpg,EFR-109D-3A_ToyotaMuseum4.jpg",0,"NEU"]]},
+   "EFR-109L":{w:44, band:LB, br:[145,215], v:[
+     ["EFR-109L-7A",119,"beige/silver/brown","E/EF/EFR/efr-109l-7a","EFR-109L-7A.png,EFR-109L-7A_ToyotaMuseum1.jpg,EFR-109L-7A_ToyotaMuseum3.jpg",0,"NEU"]]}
+  }},
+{ id:"efs-s660", n:"EFS-S660", t:"Solar-Chronograph", mv:"Solar", disp:"Analog", isNew:1,
+  ben:"Neuheit: Solar-Chronograph mit Saphirglas in nur 38 mm – für einen Chrono ungewöhnlich kompakt, nie wieder Batteriewechsel.",
+  fn:["Stoppuhr 1/20 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","Tachymeter-Lünette"],
+  d:{s:[45.3,38.3,11.6], mat:ST, gl:SGA, wr:"10 bar", pow:"Solar (Licht lädt Akku)", run:SOLAR5, acc:A20},
+  m:{
+   "EFS-S660D":{w:129, band:SB, br:[150,205], v:[
+     ["EFS-S660D-1A",199,"black/silver/silver","E/EF/EFS/efs-s660d-1a","EFS-S660D-1A.png",0,"NEU"]]},
+   "EFS-S660PB":{w:71, band:"Resinband", br:[145,215], fin:"graues IP-Gehäuse", v:[
+     ["EFS-S660PB-1A",199,"black/black/black","E/EF/EFS/efs-s660pb-1a","EFS-S660PB-1A.png,EFS-S660PB-1A_kv.jpg",0,"NEU"]]}
+  }},
+{ id:"efv-160", n:"EFV-160", t:"3-Zeiger", mv:"Quarz", disp:"Analog",
+  ben:"Günstigster Einstieg in die Edifice-Welt: kräftige Farben, strukturiertes Zifferblatt, solides Stahlband und verschraubter Boden.",
+  fn:["3 Zeiger","Datumsanzeige"],
+  d:{s:[47.5,40,10], mat:ST, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{
+   "EFV-160D":{w:110, band:SB, br:[150,205], v:[
+     ["EFV-160D-1AV",99.9,"black/silver/silver","E/EF/EFV/efv-160d-1av","EFV-160D-1AV.png",0],
+     ["EFV-160D-2BV",99,"blue/silver/silver","E/EF/EFV/efv-160d-2bv","EFV-160D-2BV.png",0],
+     ["EFV-160D-2AV",99.9,"blue/silver/silver","E/EF/EFV/efv-160d-2av","EFV-160D-2AV.png",1],
+     ["EFV-160D-3AV",99.9,"green/silver/silver","E/EF/EFV/efv-160d-3av","EFV-160D-3AV.png",0],
+     ["EFV-160D-4AV",99,"red/silver/silver","E/EF/EFV/efv-160d-4av","EFV-160D-4AV.png",0],
+     ["EFV-160D-7AV",99.9,"white/silver/silver","E/EF/EFV/efv-160d-7av","EFV-160D-7AV.png",0]]}
+  }},
+{ id:"efk-200", n:"EFK-200 Automatic", t:"Automatik 3-Zeiger", mv:"Automatik", disp:"Analog",
+  ben:"Echtes mechanisches Automatikwerk mit Saphirglas und Glasboden in 38 mm; facettierte Lünette und aufwendig poliertes H-Glieder-Band.",
+  fn:["3 Zeiger","Datumsanzeige","Automatik mit Handaufzug","Gangreserve ca. 42 Std.","Glasboden (Werk sichtbar)"],
+  d:{s:[43.6,38,11.9], mat:ST, gl:SG, wr:"10 bar", pow:"Mechanisch – Automatik mit Handaufzug", run:"Gangreserve ca. 42 Std.", acc:"−20 bis +40 Sek./Tag", back:"verschraubter Glasboden"},
+  m:{
+   "EFK-200D":{w:153, band:"massives Edelstahlband", br:[150,205], v:[
+     ["EFK-200D-2A",299,"blue/silver/silver","E/EF/efk/efk-200d-2a","EFK-200D-2A.png,EFK-200D-2A_wrist.jpg,EFK-200D-2A_model-free.jpg",0],
+     ["EFK-200D-4A",299,"red/silver/silver","E/EF/efk/efk-200d-4a","EFK-200D-4A.png,EFK-200D-4A_wrist.jpg,EFK-200D-4A_model-free.jpg",0]]},
+   "EFK-200CD":{w:153, band:"massives Edelstahlband", br:[150,205], fin:"Element aus geschmiedetem Carbon", v:[
+     ["EFK-200CD-1A",299,"black/silver/silver","E/EF/efk/efk-200cd-1a","EFK-200CD-1A.png,EFK-200CD-1A_wrist.jpg,EFK-200CD-1A_model-free.jpg",0]]},
+   "EFK-200DG":{w:153, band:"massives Edelstahlband", br:[150,205], fin:"goldfarben ionenplattiert", v:[
+     ["EFK-200DG-5A",369,"brown/gold/gold","E/EF/efk/efk-200dg-5a","EFK-200DG-5A.png,EFK-200DG-5A_model-free.jpg,EFK-200DG-5A_square01.jpg",0]]},
+   "EFK-200XPB":{s:[43.8,38.8,11.9], w:81, mat:"Carbon/Edelstahl", band:"Resinband (Faltschließe)", br:[145,195], fin:"schwarze IP-Lünette", v:[
+     ["EFK-200XPB-1A",449,"black/black/black","E/EF/efk/efk-200xpb-1a","EFK-200XPB-1A.png,EFK-200XPB-1A_wrist.jpg,EFK-200XPB-1A_kv.jpg",0]]}
+  }},
+{ id:"eqb-1300", n:"EQB-1300", t:"Solar-Chronograph mit Bluetooth", mv:"Tough Solar", bt:1, disp:"Analog",
+  ben:"Nur 9,5 mm flach trotz Solar und Bluetooth – Uhrzeit stellt sich per App automatisch, Saphirglas, sehr bequem.",
+  fn:[...BT_FN,"Telefon-Finder","Stoppuhr 1 Sek. (bis 30 Std.)","24-Std.-Anzeige & Wochentag","Vollautomatischer Kalender bis 2099"],
+  d:{s:[46.5,39.5,9.5], w:129, mat:ST, band:"massives Edelstahlband", br:[150,205], gl:SGA, wr:"10 bar", pow:"Tough Solar (Akku)", run:"ca. 5 Monate ohne Licht, bis 18 Monate mit Stromsparen", acc:"±15 Sek./Monat (mit App: automatisch korrekt)"},
+  m:{
+   "EQB-1300D":{v:[
+     ["EQB-1300D-2A",279,"blue/silver/silver","E/EQ/EQB/eqb-1300d-2a","EQB-1300D-2A.png,EQB-1300D-2A_wrist.jpg,EQB-1300D-2A_kv.jpg",0],
+     ["EQB-1300D-5A",279,"brown/silver/silver","E/EQ/EQB/eqb-1300d-5a","EQB-1300D-5A.png,EQB-1300D-5A_wrist.jpg,EQB-1300D-5A_front.jpg",0]]},
+   "EQB-1300DC":{fin:"graues IP-Gehäuse", v:[
+     ["EQB-1300DC-3A",329,"green/grey/grey","E/EQ/EQB/eqb-1300dc-3a","EQB-1300DC-3A.png,EQB-1300DC-3A_wrist.jpg,EQB-1300DC-3A_front.jpg",0]]}
+  }},
+{ id:"efk-110", n:"EFK-110 Automatic", t:"Automatik 3-Zeiger", mv:"Automatik", disp:"Analog",
+  ben:"Minimalistischer Automatik-3-Zeiger mit Saphirglas und Glasboden – günstiger als die EFK-200.",
+  fn:["3 Zeiger","Datumsanzeige","Automatik mit Handaufzug","Gangreserve ca. 42 Std.","Glasboden (Werk sichtbar)"],
+  d:{s:[43,38,11.8], w:143, mat:ST, band:"massives Edelstahlband", br:[150,205], gl:SG, wr:"10 bar", pow:"Mechanisch – Automatik mit Handaufzug", run:"Gangreserve ca. 42 Std.", acc:"−20 bis +40 Sek./Tag", back:"verschraubter Glasboden"},
+  m:{"EFK-110D":{v:[
+     ["EFK-110D-1A",279,"black/silver/silver","E/EF/efk/efk-110d-1a","EFK-110D-1A.png,EFK-110D-1A_wrist.jpg",0],
+     ["EFK-110D-2A",279,"blue/silver/silver","E/EF/efk/efk-110d-2a","EFK-110D-2A.png,EFK-110D-2A_wrist.jpg,EFK-110D_feature_2-2_sp.jpg",0],
+     ["EFK-110D-7A",279,"white/silver/silver","E/EF/efk/efk-110d-7a","EFK-110D-7A.png,EFK-110D-7A_wrist.jpg",0]]}}},
+{ id:"efk-100", n:"EFK-100 Automatic", t:"Automatik 3-Zeiger", mv:"Automatik", disp:"Analog",
+  ben:"Automatik mit galvanisch geformtem (Electroforming) Zifferblatt, Saphirglas, Glasboden und Magnetfeldresistenz.",
+  fn:["3 Zeiger","Datumsanzeige","Automatik mit Handaufzug","Gangreserve ca. 40 Std.","Magnetfeldresistent","Glasboden"],
+  d:{s:[43.5,39,12.5], w:148, mat:ST, band:SB, br:[150,205], gl:SG, wr:"10 bar", pow:"Mechanisch – Automatik mit Handaufzug", run:"Gangreserve ca. 40 Std.", acc:"−35 bis +45 Sek./Tag", back:"verschraubter Glasboden"},
+  m:{"EFK-100D":{v:[["EFK-100D-3A",279,"green/silver/silver","E/EF/efk/efk-100d-3a","EFK-100D-3A.png",0]]}}},
+{ id:"efb-109", n:"EFB-109", t:"3-Zeiger", mv:"Quarz", disp:"Analog",
+  ben:"Saphirglas, 38,5 mm und nur 9,2 mm hoch für 139 € – schlichter, eleganter Allrounder mit Hairline-Finish.",
+  fn:["3 Zeiger","Verschraubter Boden"],
+  d:{s:[43.5,38.5,9.2], w:127, mat:ST, band:SB, br:[150,205], gl:SG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{"EFB-109D":{v:[
+     ["EFB-109D-1AV",139,"black/silver/silver","E/EF/EFB/efb-109d-1av","EFB-109D-1AV.png,EFB-109D-1AV_wrist1.jpg,EFB-109D-1AV_wrist2.jpg",0],
+     ["EFB-109D-2AV",139,"blue/silver/silver","E/EF/EFB/efb-109d-2av","EFB-109D-2AV.png,EFB-109D-2AV_wrist1.jpg,EFB-109D-2AV_wrist2.jpg",0],
+     ["EFB-109D-3AV",139,"green/silver/silver","E/EF/EFB/efb-109d-3av","EFB-109D-3AV.png",0],
+     ["EFB-109D-5AV",139,"brown/silver/silver","E/EF/EFB/efb-109d-5av","EFB-109D-5AV.png",0],
+     ["EFB-109D-7AV",139,"silver/silver/silver","E/EF/EFB/efb-109d-7av","EFB-109D-7AV.png,EFB-109D-7AV_wrist1.jpg,EFB-109D-7AV_wrist2.jpg",0]]}}},
+{ id:"efb-108", n:"EFB-108", t:"3-Zeiger", mv:"Quarz", disp:"Analog",
+  ben:"Sehr flach (8,7 mm) mit Saphirglas – klassisches Motorsport-Design, aber eher breit (45 mm).",
+  fn:["3 Zeiger","Verschraubter Boden"],
+  d:{s:[47.5,45,8.7], w:133, mat:ST, band:SB, br:[150,205], gl:SG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{"EFB-108D":{v:[["EFB-108D-1AV",139,"black/silver/silver","E/EF/EFB/efb-108d-1av","EFB-108D-1AVU.png",0]]}}},
+{ id:"efr-s108", n:"EFR-S108 Slim", t:"3-Zeiger (Slim)", mv:"Quarz", disp:"Analog",
+  ben:"Nur 7,8 mm – die flachste Edifice. Achteckige Lünette im Luxus-Sport-Look, Saphirglas, rutscht unter jede Manschette.",
+  fn:["3 Zeiger","Datumsanzeige"],
+  d:{s:[44.8,39.9,7.8], w:110, mat:ST, band:SB, br:[150,205], wr:"10 bar", pow:"Batterie SR916SW · ca. 3 Jahre", acc:A20},
+  m:{
+   "EFR-S108D":{gl:SGA, v:[
+     ["EFR-S108D-1AV",129,"black/silver/silver","E/EF/EFR/EFR-S108D-1AV","EFR-S108D-1AV_Seq1.png",0],
+     ["EFR-S108D-2AV",129,"blue/silver/silver","E/EF/EFR/efr-s108d-2av","EFR-S108D-2AVU.png,EFR-S108D_kv.jpg",1],
+     ["EFR-S108D-3AV",129,"green/silver/silver","E/EF/EFR/efr-s108d-3av","EFR-S108D-3AVU.png,EFR-S108D_kv.jpg",0],
+     ["EFR-S108D-7AV",129,"white/silver/silver","E/EF/EFR/EFR-S108D-7AV","EFR-S108D-7AV_Seq1.png",0]]},
+   "EFR-S108DE":{gl:SG, v:[
+     ["EFR-S108DE-2AV",149,"blue/silver/silver","E/EF/EFR/efr-s108de-2av","EFR-S108DE-2AVU.png",0],
+     ["EFR-S108DE-3AV",149,"green/silver/silver","E/EF/EFR/efr-s108de-3av","EFR-S108DE-3AVU.png",0],
+     ["EFR-S108DE-8AV",149,"silver/silver/silver","E/EF/EFR/efr-s108de-8av","EFR-S108DE-8AVU.png",1]]}
+  }},
+{ id:"efv-100", n:"EFV-100", t:"3-Zeiger", mv:"Quarz", disp:"Analog",
+  ben:"Günstiger Sommer-Look: gut ablesbarer Pfeil-Stundenzeiger, Datum und auffällige Farben (Orange!).",
+  fn:["3 Zeiger","Datumsanzeige","Verschraubter Boden"],
+  d:{s:[48,42,10.9], w:125, mat:ST, band:SB, br:[150,205], gl:MG, wr:"10 bar", pow:"Batterie SR927SW · ca. 3 Jahre", acc:A20, back:"verschraubt"},
+  m:{"EFV-100D":{v:[
+     ["EFV-100D-2BV",99.9,"blue/silver/silver","E/EF/EFV/efv-100d-2bv","EFV-100D-2BVU.png",0],
+     ["EFV-100D-8AV",99.9,"grey/silver/silver","E/EF/EFV/efv-100d-8av","EFV-100D-8AVU.png",0],
+     ["EFV-100D-9AV",99.9,"orange/silver/silver","E/EF/EFV/efv-100d-9av","EFV-100D-9AVU.png",0]]}}},
+{ id:"efv-150", n:"EFV-150", t:"3-Zeiger", mv:"Quarz", disp:"Analog",
+  ben:"Zeitlos-schlichter 3-Zeiger, nur 9 mm hoch; als Leder-Version mit pinkgoldenem Gehäuse besonders leicht (53 g).",
+  fn:["3 Zeiger","Verschraubter Boden"],
+  d:{s:[46.5,42.6,9], mat:ST, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{
+   "EFV-150D":{w:113, band:SB, br:[150,205], v:[
+     ["EFV-150D-1AV",99.9,"black/silver/silver","E/EF/EFV/efv-150d-1av","EFV-150D-1AV.png",0],
+     ["EFV-150D-2AV",99.9,"blue/silver/silver","E/EF/EFV/efv-150d-2av","EFV-150D-2AV.png",0]]},
+   "EFV-150CL":{w:53, band:"robustes Lederband", br:[145,215], fin:"pinkgold ionenplattiert", v:[
+     ["EFV-150CL-2AV",129,"navy/rosegold/navy","E/EF/EFV/efv-150cl-2av","EFV-150CL-2AV.png",0]]}
+  }},
+{ id:"ef-129", n:"EF-129", t:"3-Zeiger", mv:"Quarz", disp:"Analog",
+  ben:"Der schlichte Klassiker mit Datum und Wochentag – günstig, robust, zeitlos.",
+  fn:["3 Zeiger","Datum + Wochentag bei 3 Uhr","Verschraubter Boden"],
+  d:{s:[49,44.8,10.4], w:156, mat:ST, band:SB, br:null, gl:MG, wr:"10 bar", pow:"Batterie SR626SW · ca. 3 Jahre", acc:A20, back:"verschraubt"},
+  m:{"EF-129D":{v:[
+     ["EF-129D-1AV",99.9,"black/silver/silver","E/EF/EF1/EF-129D-1AV","EF-129D-1AV_01.png",0],
+     ["EF-129D-2AV",99.9,"blue/silver/silver","E/EF/EF1/EF-129D-2AV","EF-129D-2AV_2000x2000.png",1]]}}},
+{ id:"efr-575", n:"EFR-575", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Vintage-Chronograph nach klassischen Sportwagen-Instrumenten, gewölbtes Glas, abgestuftes Zifferblatt – viele Band-Optionen (Stahl, Leder, Stoff).",
+  fn:["Stoppuhr 1 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige"],
+  d:{s:[47.9,40.5,12.6], mat:ST, gl:"Mineralglas, gewölbt", wr:"10 bar", pow:B2, acc:A20},
+  m:{
+   "EFR-575D":{w:125, band:SB, br:[150,205], v:[
+     ["EFR-575D-1A",119,"black/silver/silver","E/EF/EFR/efr-575d-1a","EFR-575D-1A.png,EFR-575D-1A_image.png,EFR-575D-1AEF_EDIFICE_onfigure_2_1050x1050.jpg",0],
+     ["EFR-575D-2A",119,"blue/silver/silver","E/EF/EFR/efr-575d-2a","EFR-575D-2A.png",0],
+     ["EFR-575D-4A",129,"red/silver/silver","E/EF/EFR/efr-575d-4a","EFR-575D-4A.png,EFR-575D-1A_image.png",0]]},
+   "EFR-575L":{w:65, band:LB, br:[175,215], v:[
+     ["EFR-575L-7A",119,"white/silver/brown","E/EF/EFR/efr-575l-7a","EFR-575L-7A.png,EFR-575L-7AEF_EDIFICE_onfigure_1050x1050.jpg,EFR-575L-7AEF_EDIFICE_onfigure_car_1050x1050.jpg",0]]},
+   "EFR-575C":{w:64, band:"Leder-/Stoffband", br:[145,215], v:[
+     ["EFR-575C-8A",129,"grey/silver/grey","E/EF/EFR/efr-575c-8a","EFR-575C-8A.png",0]]},
+   "EFR-575CL":{w:65, band:LB, br:[175,215], fin:"goldfarben ionenplattiert", v:[
+     ["EFR-575CL-3A",139,"green/gold/black","E/EF/EFR/efr-575cl-3a","EFR-575CL-3A.png,EFR-575CL-3AEF_EDIFICE_onfigure_1050x1050.jpg,EFR-575CL-3AEF_EDIFICE_onfigure_2_1050x1050.jpg",0],
+     ["EFR-575CL-5A",149,"brown/gold/brown","E/EF/EFR/efr-575cl-5a","EFR-575CL-5A.png",0]]}
+  }},
+{ id:"efb-730", n:"EFB-730", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Racing-Chronograph im klassischen 3-6-9-Layout mit Saphirglas in kompakten 40 mm – viel Uhr für 149 €.",
+  fn:["Stoppuhr 1 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige","Verschraubter Boden"],
+  d:{s:[47,40,11], mat:ST, gl:SG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{
+   "EFB-730D":{w:136, band:SB, br:[150,205], v:[
+     ["EFB-730D-1AV",149,"black,silver/silver/silver","E/EF/EFB/efb-730d-1av","EFB-730D-1AV.png,EFB-730D-1AV_wrist.jpg",0],
+     ["EFB-730D-2AV",149,"blue,silver/silver/silver","E/EF/EFB/efb-730d-2av","EFB-730D-2AV.png,EFB-730D-2AV_wrist01.jpg",0],
+     ["EFB-730D-2BV",149,"blue/silver/silver","E/EF/EFB/efb-730d-2bv","EFB-730D-2BVU.png",0],
+     ["EFB-730D-3AV",149,"green/silver/silver","E/EF/EFB/efb-730d-3av","EFB-730D-3AVU.png",0],
+     ["EFB-730D-7AV",149,"silver,black/silver/silver","E/EF/EFB/efb-730d-7av","EFB-730D-7AV.png,EFB-730D-7AV_wrist.jpg",0]]},
+   "EFB-730L":{w:65, band:LB, br:[175,215], v:[
+     ["EFB-730L-7AV",149,"beige/silver/brown","E/EF/EFB/efb-730l-7av","EFB-730L-7AVU.png",0]]}
+  }},
+{ id:"efr-526", n:"EFR-526", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Klassischer, mittelgroßer Chronograph mit fein gearbeiteten Details und 1/10-Sek.-Stoppuhr.",
+  fn:["Stoppuhr 1/10 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","Verschraubter Boden"],
+  d:{s:[48.5,43.8,11.6], mat:ST, gl:MG, wr:"10 bar", pow:B2, acc:A20, back:"verschraubt", br:null},
+  m:{
+   "EFR-526D":{w:149, band:SB, v:[
+     ["EFR-526D-1AV",119,"black/black/silver","E/EF/EFR/EFR-526D-1AV","EFR-526D-1AV_Seq1.png",0],
+     ["EFR-526D-2AV",119,"blue/silver/silver","E/EF/EFR/efr-526d-2av","EFR-526D-2AVU.png",0],
+     ["EFR-526D-3AV",119,"green/silver/silver","E/EF/EFR/efr-526d-3av","EFR-526D-3AVU.png",1]]},
+   "EFR-526L":{w:74, band:LB, v:[
+     ["EFR-526L-1AV",119,"black/black/black","E/EF/EFR/EFR-526L-1AV","EFR-526L-1AV_Seq1.png",0]]}
+  }},
+{ id:"efv-610", n:"EFV-610", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Moderner, mittelgroßer Chronograph: feine Lünette, großes, gut lesbares Zifferblatt, optional mit Roségold-Akzenten.",
+  fn:["Stoppuhr 1/10 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","Verschraubter Boden"],
+  d:{s:[48.6,43.8,11], mat:ST, gl:MG, wr:"10 bar", pow:B2, acc:A20, back:"verschraubt"},
+  m:{
+   "EFV-610D":{w:128, band:SB, br:null, v:[
+     ["EFV-610D-1AV",119,"black/silver/silver","E/EF/EFV/EFV-610D-1AV","EFV-610D-1AV_Seq1.png",0],
+     ["EFV-610D-3CV",119,"green/silver/silver","E/EF/EFV/efv-610d-3cv","EFV-610D-3CVU.png",0]]},
+   "EFV-610EL":{w:72, band:LB, br:[175,215], v:[
+     ["EFV-610EL-5A",119,"rosegold/silver/black","E/EF/EFV/efv-610el-5a","EFV-610EL-5AU.png",0]]},
+   "EFV-610ECL":{w:72, band:LB, br:[175,215], fin:"roségold ionenplattiert", v:[
+     ["EFV-610ECL-1A",129,"black/rosegold/black","E/EF/EFV/efv-610ecl-1a","EFV-610ECL-1AU.png",0]]}
+  }},
+{ id:"efv-640", n:"EFV-640", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Farbenfroher Chronograph mit achteckiger, mattierter Lünette und polierten Kanten; relativ flach (10,8 mm).",
+  fn:["Stoppuhr 1/10 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz"],
+  d:{s:[47,44.3,10.8], w:136, mat:ST, band:SB, br:[150,205], gl:MG, wr:"10 bar", pow:B2, acc:A20},
+  m:{"EFV-640D":{v:[["EFV-640D-3AV",139,"green/silver/silver","E/EF/EFV/efv-640d-3av","EFV-640D-3AV.png",0]]}}},
+{ id:"efv-540", n:"EFV-540", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Komplett schwarz/grau ionenplattiert – maskuliner Stealth-Look mit Alu-Elementen.",
+  fn:["Stoppuhr 1 Sek. (bis 10 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige","Verschraubter Boden"],
+  d:{s:[48.5,43.8,11.6], w:144, mat:"Edelstahl/Aluminium", band:SB, br:null, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt", fin:"graues IP-Gehäuse"},
+  m:{"EFV-540DC":{v:[["EFV-540DC-1CV",139,"grey/black,grey/grey","E/EF/EFV/efv-540dc-1cv","EFV-540DC-1CVU.png",0]]}}},
+{ id:"efv-560", n:"EFV-560", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Understatement-Chronograph für Business und Freizeit, solide Verarbeitung zum fairen Preis.",
+  fn:["Stoppuhr 1 Sek. (bis 30 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige","Verschraubter Boden"],
+  d:{s:[50,44,11.6], w:133, mat:ST, band:SB, br:null, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{"EFV-560D":{v:[
+     ["EFV-560D-1AV",129,"black/silver/silver","E/EF/EFV/EFV-560D-1AV","EFV-560D-1AV_1.png",0],
+     ["EFV-560D-2AV",129,"blue/silver/silver","E/EF/EFV/EFV-560D-2AV","EFV-560D-2AV_1.png",0]]}}},
+{ id:"efv-600", n:"EFV-600", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Zifferblatt mit Farbverlauf und grünen Akzenten, fluoreszierende Zeiger – aktuell ausverkauft.",
+  fn:["Stoppuhr 1/10 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","Verschraubter Boden"],
+  d:{s:[49,43.8,11.1], w:135, mat:ST, band:SB, br:null, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{"EFV-600D":{v:[["EFV-600D-2AV",0,"blue/black/silver","E/EF/EFV/EFV-600D-2AV","EFV-600D-2AV_Seq1.png,EFV-600D-2AV_2.jpg",1]]}}},
+{ id:"efr-552", n:"EFR-552", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Großer, markanter Chronograph (47 mm) mit Alu-Elementen – für alle, die eine präsente Uhr wollen.",
+  fn:["Stoppuhr 1 Sek. (bis 10 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige","Verschraubter Boden"],
+  d:{s:[53,47,12.3], mat:"Edelstahl/Aluminium", gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt", br:null},
+  m:{
+   "EFR-552D":{w:157, band:SB, v:[
+     ["EFR-552D-1AV",129,"black/black/silver","E/EF/EFR/EFR-552D-1AV","EFR-552D-1AV_Seq1.png",0],
+     ["EFR-552D-1A2V",129,"black/blue/silver","E/EF/EFR/EFR-552D-1A2V","EFR-552D-1A2V_Seq1.png",0],
+     ["EFR-552D-2AV",129,"blue/silver/silver","E/EF/EFR/efr-552d-2av","EFR-552D-2AVU.png",0]]},
+   "EFR-552L":{w:93, band:LB, v:[
+     ["EFR-552L-5AV",129,"brown/brown,silver/black","E/EF/EFR/efr-552l-5av","EFR-552L-5AVU.png",0]]}
+  }},
+{ id:"efr-556", n:"EFR-556", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Großer Chronograph mit mehrschichtigem Zifferblatt; DB-Versionen mit schwarzer IP-Lünette.",
+  fn:["Stoppuhr 1 Sek. (bis 30 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige","Datumsanzeige","Verschraubter Boden"],
+  d:{s:[53.5,48.7,12.6], mat:ST, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt", br:null},
+  m:{
+   "EFR-556D":{w:159, band:SB, v:[
+     ["EFR-556D-1AV",139,"black/silver/silver","E/EF/EFR/EFR-556D-1AV","EFR-556D-1AV_01.png",0]]},
+   "EFR-556DB":{w:159, band:SB, fin:"schwarze IP-Lünette", v:[
+     ["EFR-556DB-1AV",149,"black/black/silver","E/EF/EFR/EFR-556DB-1AV","EFR-556DB-1AV_01.png",0],
+     ["EFR-556DB-2AV",149,"black,blue/blue/silver","E/EF/EFR/EFR-556DB-2AV","EFR-556DB-2AV_01.png",0]]},
+   "EFR-556L":{w:90, band:LB, v:[
+     ["EFR-556L-1AV",139,"black,blue/silver/black","E/EF/EFR/EFR-556L-1AV","EFR-556L-1AV_01.png",0]]}
+  }},
+{ id:"efr-571", n:"EFR-571", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Markantes Design mit 3D-Indizes und retrograder Stoppuhr-Anzeige.",
+  fn:["Stoppuhr 1 Sek. (bis 10 Min., retrograd)","24-Std.-Anzeige","Verschraubter Boden"],
+  d:{s:[51,47.1,11.3], w:146, mat:ST, band:SB, br:null, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{"EFR-571D":{v:[["EFR-571D-1AV",139,"black/silver/silver","E/EF/EFR/EFR-571D-1AV","EFR-571D-1AV_Seq1.png,EFR-571D-1AV_2.jpg",0]]}}},
+{ id:"efr-539", n:"EFR-539", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Großer Sport-Chronograph mit dreidimensionaler, farbig ionenplattierter Lünette – sehr präsent.",
+  fn:["Stoppuhr 1/10 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","Verschraubter Boden"],
+  d:{s:[54.1,49.5,11.7], mat:"Edelstahl/Aluminium", band:SB, gl:MG, wr:"10 bar", pow:B2, acc:A20, back:"verschraubt"},
+  m:{
+   "EFR-539DE":{w:184, br:[150,205], fin:"farbige IP-Lünette", v:[
+     ["EFR-539DE-2AV",149,"blue/blue,silver/silver","E/EF/EFR/efr-539de-2av","EFR-539DE-2AVU.png",0],
+     ["EFR-539DE-3AV",149,"green/green,silver/silver","E/EF/EFR/efr-539de-3av","EFR-539DE-3AVU.png",0],
+     ["EFR-539DE-8AV",149,"grey/grey/silver","E/EF/EFR/efr-539de-8av","EFR-539DE-8AVU.png",0]]},
+   "EFR-539D":{w:185, br:null, fin:"blaue IP-Lünette", v:[
+     ["EFR-539D-1A2V",0,"black/black,blue/silver","E/EF/EFR/EFR-539D-1A2V","EFR-539D-1A2V_Seq1.png,EFR-539D-1A2V_Seq2.jpg,EFR-539D-1A2V_Seq3.jpg",1]]}
+  }},
+{ id:"ef-527", n:"EF-527", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Gezahnte Lünette, massives Band mit kleineren, abgerundeten Gliedern – sehr angenehm zu tragen.",
+  fn:["Stoppuhr 1/20 Sek. (bis 12 Std.)","Verschraubter Boden"],
+  d:{s:[51,45.5,11.4], w:157, mat:ST, band:SB, br:null, gl:MG, wr:"10 bar", pow:"Batterie SR927W · ca. 2 Jahre", acc:A20, back:"verschraubt"},
+  m:{"EF-527D":{v:[
+     ["EF-527D-1AV",169,"black/silver/silver","E/EF/EF5/EF-527D-1AV","EF-527D-1AV_01.png",0],
+     ["EF-527D-2AV",169,"blue/silver/silver","E/EF/EF5/EF-527D-2AV","EF-527D-2AV_1.png",0],
+     ["EF-527D-3AV",169,"green/silver/silver","E/EF/EF5/EF-527D-3AV","EF-527D-3AV_1.png",0]]}}},
+{ id:"ef-539", n:"EF-539", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Großer Chronograph mit schwarzer Tachymeter-Lünette – aktuell ausverkauft.",
+  fn:["Stoppuhr 1 Sek. (bis 12 Std.)","Tachymeter-Lünette","Verschraubter Boden"],
+  d:{s:[53.5,48.5,11.5], w:198, mat:ST, band:"Edelstahlband (Sicherheitsverschluss)", br:null, gl:MG, wr:"10 bar", pow:"Batterie SR927W · ca. 2 Jahre", acc:A20, back:"verschraubt", fin:"teilweise ionenplattiert"},
+  m:{"EF-539D":{v:[["EF-539D-1AV",0,"black/black/silver","E/EF/EF5/EF-539D-1AV","EF-539D-1AV_Seq1.png",1]]}}},
+{ id:"efv-620", n:"EFV-620", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Die größte Edifice (50,5 mm) – sportlich mit farbigen Akzenten, nur etwas für kräftige Handgelenke.",
+  fn:["Stoppuhr 1/10 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","Verschraubter Boden"],
+  d:{s:[55,50.5,11.8], mat:ST, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt", br:null},
+  m:{
+   "EFV-620D":{w:154, band:SB, v:[
+     ["EFV-620D-1A2V",129,"black/blue/silver","E/EF/EFV/efv-620d-1a2v","EFV-620D-1A2VU.png",0],
+     ["EFV-620D-1A4V",129,"black/black/silver","E/EF/EFV/efv-620d-1a4v","EFV-620D-1A4VU.png",0],
+     ["EFV-620D-2AV",129,"blue/silver/silver","E/EF/EFV/efv-620d-2av","EFV-620D-2AVU.png",0]]},
+   "EFV-620L":{w:94, band:LB, v:[
+     ["EFV-620L-1AV",129,"black/silver/black","E/EF/EFV/efv-620l-1av","EFV-620L-1AVU.png",0]]}
+  }},
+{ id:"efv-550", n:"EFV-550", t:"Chronograph", mv:"Quarz", disp:"Analog",
+  ben:"Kraftvoller Chrono mit schwarzer Lünette, hellblauen Akzenten und Resinband – aktuell ausverkauft.",
+  fn:["Stoppuhr 1/10 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","Verschraubter Boden"],
+  d:{s:[53,47,12.1], w:96, mat:ST, band:"Resinband", br:null, gl:MG, wr:"10 bar", pow:B3, acc:A20, back:"verschraubt"},
+  m:{"EFV-550P":{v:[["EFV-550P-1AV",0,"black/black/black","E/EF/EFV/EFV-550P-1AV","EFV-550P-1AV_Seq1.png,EFV-550P-1AV_Seq2.jpg,EFV-550P-1AV_Seq3.jpg",1]]}}},
+{ id:"efs-s650", n:"EFS-S650", t:"Solar-Chronograph", mv:"Solar", disp:"Analog",
+  ben:"Erste Edifice mit Keramik-Lünette (kratzfest, glänzt wie Lack) plus Solar und entspiegeltes Saphirglas.",
+  fn:["Keramik-Lünette","Stoppuhr 1 Sek. (bis 30 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige"],
+  d:{s:[46.7,40.9,11.7], w:140, mat:"Edelstahl/Harz", band:SB, br:[150,205], gl:SGA, wr:"10 bar", pow:"Solar (Licht lädt Akku)", run:SOLAR5, acc:A20},
+  m:{
+   "EFS-S650D":{v:[
+     ["EFS-S650D-2A",229,"blue/blue,silver/silver","E/EF/EFS/efs-s650d-2a","EFS-S650D-2A.png,EFS-S650D-2A_kv.jpg,EFS-S650_feature_1.jpg",0],
+     ["EFS-S650D-3A",229,"green/green,silver/silver","E/EF/EFS/efs-s650d-3a","EFS-S650D-3A.png,EFS-S650D-3A_feature_3.jpg,EFS-S650D-3A_front.jpg",0]]},
+   "EFS-S650DC":{fin:"schwarzes IP-Gehäuse", v:[
+     ["EFS-S650DC-1A",269,"black/black/black","E/EF/EFS/efs-s650dc-1a","EFS-S650DC-1A.png,EFS-S650DC-1A_feature_3.jpg,EFS-S650DC-1A_front.jpg",0]]}
+  }},
+{ id:"efs-s570", n:"EFS-S570 Slim", t:"Solar-Chronograph (Slim)", mv:"Solar", disp:"Analog",
+  ben:"Solar-Chronograph mit Saphirglas, aber nur 9,7 mm dünn – für einen Multi-Zeiger-Chrono sehr flach.",
+  fn:["Stoppuhr 1 Sek. (bis 60 Min.)","Zwischenzeit & 1./2. Platz","Kleine Sekunde"],
+  d:{s:[49,44,9.7], w:133, mat:ST, band:SB, br:[150,205], gl:SGA, wr:"10 bar", pow:"Solar (Licht lädt Akku)", run:"ca. 6 Monate ohne Licht", acc:A20},
+  m:{"EFS-S570D":{v:[
+     ["EFS-S570D-3A",199,"green,black/silver/silver","E/EF/EFS/efs-s570d-3a","EFS-S570D-3AU.png",0],
+     ["EFS-S570D-5A",199,"brown,black/silver/silver","E/EF/EFS/efs-s570d-5a","EFS-S570D-5AU.png",0]]}}},
+{ id:"efs-s630", n:"EFS-S630", t:"Solar-Chronograph", mv:"Solar", disp:"Analog",
+  ben:"Robuster Solar-Chrono mit speziell geformten Bandanstößen, Saphirglas und Lederband.",
+  fn:["Stoppuhr 1 Sek. (bis 30 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige","Verschraubter Boden"],
+  d:{s:[48.4,44,12.1], w:77, mat:ST, band:LB, br:[175,215], gl:SGA, wr:"10 bar", pow:"Solar (Licht lädt Akku)", run:SOLAR5, acc:A20, back:"verschraubt", fin:"schwarze IP-Lünette"},
+  m:{"EFS-S630BL":{v:[["EFS-S630BL-5AV",199,"brown,red/black,silver/black","E/EF/EFS/efs-s630bl-5av","EFS-S630BL-5AVU.png",0]]}}},
+{ id:"efs-s510", n:"EFS-S510", t:"Solar-Chronograph", mv:"Solar", disp:"Analog",
+  ben:"Solar-Chronograph mit Batteriestandsanzeige und Datum – Casio gibt hier nur wenige Daten an.",
+  fn:["Stoppuhr 1 Sek. (bis 30 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige","Batteriestandsanzeige","Datumsanzeige"],
+  d:{s:[52,46.1,11.8], w:159, mat:"k. A.", band:"Edelstahlband", br:null, gl:"k. A. (Serie „Slim Sapphire“)", wr:"10 bar", pow:"Solar (Licht lädt Akku)", run:SOLAR5, acc:A20},
+  m:{"EFS-S510D":{v:[
+     ["EFS-S510D-1AV",179,"black/black/silver","E/EF/EFS/EFS-S510D-1AV","EFS-S510D-1AV_01.png",0],
+     ["EFS-S510D-2AV",179,"blue/blue/silver","E/EF/EFS/EFS-S510D-2AV","EFS-S510D-2AV_01.png",0]]}}},
+{ id:"eqs-940", n:"EQS-940 „Nighttime Drive“", t:"Solar-Chronograph", mv:"Solar", disp:"Analog",
+  ben:"Sondermodell der Serie „Nighttime Drive“: dunkelblaue Lünette, inspiriert von nächtlichen Autofahrten; leicht mit Lederband.",
+  fn:["Stoppuhr 1 Sek. (bis 30 Min.)","Zwischenzeit & 1./2. Platz","24-Std.-Anzeige","Verschraubter Boden"],
+  d:{s:[49.5,45.5,12.5], w:74, mat:ST, band:LB, br:[175,215], gl:MG, wr:"10 bar", pow:"Solar (Licht lädt Akku)", run:SOLAR5, acc:A20, back:"verschraubt", fin:"blaue IP-Lünette"},
+  m:{"EQS-940NL":{v:[["EQS-940NL-1AV",249,"black/black/black","E/EQ/EQS/eqs-940nl-1av","EQS-940NL-1AVU.png",0,"Serie Nighttime Drive"]]}}},
+{ id:"eqb-1100", n:"EQB-1100", t:"Solar-Chronograph mit Bluetooth", mv:"Tough Solar", bt:1, disp:"Analog",
+  ben:"Nur 8,9 mm dünner Racing-Chronograph mit Solar, Bluetooth, Dualzeit und entspiegeltem Saphirglas.",
+  fn:[...BT_FN,"Telefon-Finder","Dualzeit (Heimatstadt-Wechsel)","Stoppuhr 1 Sek. (bis 24 Std.)","Täglicher Alarm","24-Std.-Anzeige & Wochentag","Tachymeter","Kalender bis 2099"],
+  d:{s:[51.1,44.6,8.9], w:124, mat:ST, band:SB, br:null, gl:SGA, wr:"10 bar", pow:"Tough Solar (Akku)", run:"ca. 5 Monate ohne Licht, bis 19 Monate mit Stromsparen", acc:"±15 Sek./Monat (mit App: automatisch korrekt)"},
+  m:{"EQB-1100D":{v:[["EQB-1100D-1A",299,"black/silver/silver","E/EQ/EQB/EQB-1100D-1A","EQB-1100D-1A_Seq1.png,EQB-1100D-1A_5.jpg,EQB-1100D-1A_6.jpg",0]]}}},
+{ id:"ecb-2300", n:"ECB-2300 Sospensione", t:"Analog-Digital mit Bluetooth", mv:"Tough Solar", bt:1, disp:"Analog-Digital",
+  ben:"Neuestes Sospensione-Modell: Bandanstöße wie F1-Radaufhängung, Carbon-Gehäuse, 2 mm kleiner als die ECB-2000 und voll ausgestattet.",
+  fn:[...BT_FN,"Telefon-Finder","Stoppuhr 1/100 Sek.","Countdown-Timer (60 Min.)","5 tägliche Alarme","Weltzeit (38 Zeitzonen)","Doppel-LED-Licht","Kalender bis 2099","Neobrite-Leuchtzeiger"],
+  d:{s:[50.2,45.8,10.9], w:122, mat:"Carbon/Edelstahl", band:SB, br:[150,205], gl:MG, wr:"10 bar", pow:"Tough Solar (Akku)", run:"ca. 7 Monate ohne Licht, bis 18 Monate mit Stromsparen", acc:"±15 Sek./Monat (mit App: automatisch korrekt)"},
+  m:{
+   "ECB-2300D":{v:[
+     ["ECB-2300D-1A",249,"black/silver/silver","E/EC/ECB/ecb-2300d-1a","ECB-2300D-1A.png,ECB-2300D_kv.jpg,ECB-2300D_feature_1_en.jpg",0],
+     ["ECB-2300D-2A",249,"blue/silver/silver","E/EC/ECB/ecb-2300d-2a","ECB-2300D-2A.png,ECB-2300D_feature_1_en.jpg,ECB-2300D-2A_front.jpg",0]]},
+   "ECB-2300DC":{fin:"schwarze IP-Lünette", v:[
+     ["ECB-2300DC-1A",299,"black/black/black","E/EC/ECB/ecb-2300dc-1a","ECB-2300DC-1A.png,ECB-2300D_feature_1_en.jpg,ECB-2300DC-1A_front.jpg",0]]}
+  }},
+{ id:"ecb-2000", n:"ECB-2000 Sospensione", t:"Analog-Digital mit Bluetooth", mv:"Tough Solar", bt:1, disp:"Analog-Digital",
+  ben:"Die erste Edifice mit Gehäuse aus carbonfaserverstärktem Kunststoff – Rennwagen-Aufhängung als Design, Solar + Bluetooth.",
+  fn:[...BT_FN,"Telefon-Finder","Stoppuhr 1/100 Sek.","Countdown-Timer (60 Min.)","5 tägliche Alarme","Weltzeit (38 Zeitzonen)","Doppel-LED-Licht","Kalender bis 2099","Neobrite-Leuchtzeiger"],
+  d:{s:[51,47.8,10.8], w:125, mat:"Carbon/Edelstahl", band:SB, br:[150,205], gl:MG, wr:"10 bar", pow:"Tough Solar (Akku)", run:"ca. 7 Monate ohne Licht, bis 18 Monate mit Stromsparen", acc:"±15 Sek./Monat (mit App: automatisch korrekt)"},
+  m:{
+   "ECB-2000D":{v:[
+     ["ECB-2000D-1A",199,"black,white/silver,black/silver","E/EC/ECB/ecb-2000d-1a","ECB-2000D-1A.png,ECB-2000D-1A_front.jpg,ECB-2000D-1A_app_en.jpg",0]]},
+   "ECB-2000DC":{fin:"graues IP-Gehäuse", v:[
+     ["ECB-2000DC-1A",249,"black/black/black","E/EC/ECB/ecb-2000dc-1a","ECB-2000DC-1A.png,ECB-2000DC-1A_front.jpg",0]]},
+   "ECB-2000CB":{fin:"blaue IP-Lünette („Cool Blue“)", v:[
+     ["ECB-2000CB-2A",279,"blue/blue/blue","E/EC/ECB/ecb-2000cb-2a","ECB-2000CB-2A.png,COOL-BLUE_kv_overseas.jpg,ECB-2000CB-2A_feature_01_2.jpg",0]]}
+  }},
+{ id:"ecb-950", n:"ECB-950", t:"Analog-Digital mit Bluetooth", mv:"Tough Solar", bt:1, disp:"Analog-Digital",
+  ben:"Voll ausgestattete Analog-Digital-Uhr mit achteckiger Lünette, Solar, Bluetooth und 1/1000-Sek.-Stoppuhr – eher groß und dick (13,9 mm).",
+  fn:[...BT_FN,"Stoppuhr 1/1000 Sek.","Countdown-Timer (24 Std.)","5 Multifunktionsalarme","Weltzeit (39 Zeitzonen)","Vollautomatisches Doppel-LED-Licht","Zeiger-Ausweichfunktion","Tachymeter","Kalender bis 2099"],
+  d:{s:[51.2,48,13.9], w:171, mat:ST, band:SB, br:[150,205], gl:MG, wr:"10 bar", pow:"Tough Solar (Akku)", run:"ca. 6 Monate ohne Licht, bis 19 Monate mit Stromsparen", acc:"±15 Sek./Monat (mit App: automatisch korrekt)"},
+  m:{
+   "ECB-950DB":{fin:"schwarze IP-Lünette", v:[
+     ["ECB-950DB-1A",199,"black/black,silver/silver","E/EC/ECB/ecb-950db-1a","ECB-950DB-1A.png,ECB-950DB-1A_02.jpg,ECB-950DB-1A_01.jpg",0],
+     ["ECB-950DB-2A",199,"blue/black,silver/silver","E/EC/ECB/ecb-950db-2a","ECB-950DB-2A.png,ECB-950DB-2A_02.jpg,ECB-950DB-2A_01.jpg",0]]},
+   "ECB-950DC":{fin:"schwarzes IP-Gehäuse", v:[
+     ["ECB-950DC-1A",229,"black/black/silver","E/EC/ECB/ecb-950dc-1a","ECB-950DC-1A.png,ECB-950DC-1A_01.jpg,ECB-950DC-1A_02.jpg",1]]}
+  }},
+{ id:"ecb-900", n:"ECB-900", t:"Analog-Digital mit Bluetooth", mv:"Tough Solar", bt:1, disp:"Analog-Digital",
+  ben:"Sportliche Multifunktionsuhr mit LCD, Solar und Bluetooth; rote Akzente, Tachymeter.",
+  fn:[...BT_FN,"Stoppuhr 1/1000 Sek.","Countdown-Timer (24 Std.)","Stündliches Zeitsignal","Weltzeit (39 Zeitzonen)","Vollautomatisches Doppel-LED-Licht","Tachymeter","Kalender bis 2099"],
+  d:{s:[51.5,48,13.9], w:163, mat:ST, band:SB, br:null, gl:MG, wr:"10 bar", pow:"Tough Solar (Akku)", run:"ca. 6 Monate ohne Licht, bis 19 Monate mit Stromsparen", acc:"±15 Sek./Monat (mit App: automatisch korrekt)"},
+  m:{"ECB-900DB":{v:[
+     ["ECB-900DB-1A",199,"black/black/silver","E/EC/ECB/ECB-900DB-1A","ECB-900DB-1A_Seq01.png,ECB-900DB-1A_Seq02.jpg,ECB-900DB-1A_Seq03.jpg",0],
+     ["ECB-900DB-1B",199,"black/blue/silver","E/EC/ECB/ECB-900DB-1B","ECB-900DB-1B_Seq1.png,ECB-900DB-1B_Seq2.jpg,ECB-900DB-1B_Seq3.jpg",0]]}}},
+{ id:"ecb-s10", n:"ECB-S10", t:"Analog-Digital mit Bluetooth", mv:"Quarz", bt:1, disp:"Analog-Digital",
+  ben:"Smarte Funktionen ohne Smartwatch in einem unter 10 mm flachen Gehäuse – mit Saphirglas. Läuft mit Batterie (kein Solar).",
+  fn:[...BT_FN,"Telefon-Finder","Stoppuhr 1/100 Sek.","Countdown-Timer (24 Std.)","5 Tagesalarme","Weltzeit (38 Zeitzonen)","Doppel-LED-Licht","Kalender bis 2099"],
+  d:{s:[48.1,43,9.6], w:129, mat:ST, band:SB, br:[150,205], gl:SG, wr:"10 bar", pow:"2× Batterie SR726W · ca. 2 Jahre", acc:"±15 Sek./Monat (mit App: automatisch korrekt)"},
+  m:{"ECB-S10D":{v:[
+     ["ECB-S10D-2A",189,"blue/silver/silver","E/EC/ECB/ecb-s10d-2a","ECB-S10D-2A.png,ECB-S10D-2A_wrist1.jpg,ECB-S10D-2A_LED.png",0],
+     ["ECB-S10D-8A",189,"grey/silver/silver","E/EC/ECB/ecb-s10d-8a","ECB-S10D-8A.png,ECB-S10D-8A_kv.jpg,ECB-S10_feature_1-1.jpg",0]]}}},
+{ id:"ecb-10", n:"ECB-10", t:"Analog-Digital mit Bluetooth", mv:"Quarz", bt:1, disp:"Analog-Digital",
+  ben:"Eleganter Edelstahl-Chrono mit Smartphone-Link und Gold-Akzenten; 1/1000-Sek.-Stoppuhr. Batterie statt Solar.",
+  fn:[...BT_FN,"Telefon-Finder","Stoppuhr 1/1000 Sek.","Countdown-Timer (24 Std.)","5 Tagesalarme","Weltzeit (38 Zeitzonen)","Auto-LED-Licht","Kalender bis 2099"],
+  d:{s:[51,48.5,12.5], w:167, mat:ST, band:SB, br:[150,205], gl:MG, wr:"10 bar", pow:"Batterie CR2016 · ca. 2 Jahre", acc:"±15 Sek./Monat (mit App: automatisch korrekt)", fin:"schwarze IP-Lünette"},
+  m:{"ECB-10DB":{v:[["ECB-10DB-1A9",179,"black,gold/black,silver/silver","E/EC/ECB/ecb-10db-1a9","ECB-10DB-1A9.png",0]]}}},
+{ id:"ecb-30", n:"ECB-30", t:"Analog-Digital mit Bluetooth", mv:"Quarz", bt:1, disp:"Analog-Digital",
+  ben:"Hightech-Look mit einfacher Smartphone-Verbindung, Auto-LED und Zeiger-Ausweichfunktion für freie Sicht aufs Display.",
+  fn:[...BT_FN,"Stoppuhr 1/1000 Sek.","Countdown-Timer (24 Std.)","5 Tagesalarme","Weltzeit (38 Zeitzonen)","Auto-LED-Licht","Zeiger-Ausweichfunktion","Kalender bis 2099"],
+  d:{s:[52.3,48.7,12.9], w:148, mat:ST, band:SB, br:null, gl:MG, wr:"10 bar", pow:"Batterie CR2016 · ca. 2 Jahre", acc:"±15 Sek./Monat (mit App: automatisch korrekt)"},
+  m:{"ECB-30D":{v:[
+     ["ECB-30D-1A",159,"black/silver/silver","E/EC/ECB/ecb-30d-1a","ECB-30D-1A.png,ECB-30D-1A_Lifestyle02.jpg,ECB-30D-1A_kv.jpg",0],
+     ["ECB-30D-2A",159,"blue/silver/silver","E/EC/ECB/ecb-30d-2a","ECB-30D-2A.png,ECB-30D-2A_01.jpg",0]]}}},
+{ id:"ecb-40", n:"ECB-40 Sospensione", t:"Analog-Digital mit Bluetooth", mv:"Quarz", bt:1, disp:"Analog-Digital",
+  ben:"Federleicht (62 g): Carbon-Gehäuse im Vier-Arm-Aufhängungs-Design mit Resinband und Smartphone-Link.",
+  fn:[...BT_FN,"Stoppuhr 1/1000 Sek.","Countdown-Timer (24 Std.)","5 Tagesalarme","Weltzeit (38 Zeitzonen)","Auto-LED-Licht","Zeiger-Ausweichfunktion","Neobrite-Leuchtzeiger","Kalender bis 2099"],
+  d:{s:[52.4,48,12.7], w:62, mat:"Carbon/Edelstahl", band:"Resinband", br:[145,215], gl:MG, wr:"10 bar", pow:"Batterie CR2016 · ca. 2 Jahre", acc:"±15 Sek./Monat (mit App: automatisch korrekt)", fin:"schwarze IP-Lünette"},
+  m:{"ECB-40PB":{v:[["ECB-40PB-1A",179,"black/black/black","E/EC/ECB/ecb-40pb-1a","ECB-40PB-1A.png",0]]}}},
+{ id:"efv-c120", n:"EFV-C120", t:"Analog-Digital", mv:"Quarz", disp:"Analog-Digital",
+  ben:"Batterie hält bis zu 10 Jahre; Analog-Digital mit Weltzeit, Alarmen und Telememo – aktuell ausverkauft.",
+  fn:["Stoppuhr 1/100 Sek. (bis 24 Std.)","Countdown-Timer (24 Std.)","3 Alarme (1× Schlummer)","Weltzeit (29 Zeitzonen)","Telememo (30 Einträge)","Kalender bis 2099"],
+  d:{s:[49.5,45.5,13.7], w:78, mat:ST, band:LB, br:[175,215], gl:MG, wr:"10 bar", pow:"Batterie CR2025 · ca. 10 Jahre", acc:"±30 Sek./Monat"},
+  m:{"EFV-C120L":{v:[["EFV-C120L-8A",129,"grey/silver/black","E/EF/EFV/efv-c120l-8a","EFV-C120L-8A.png",1]]}}}
+];
+
+const IMG={"E/EF/EFR/efr-109d-1a/assets/EFR-109D-1A.png":"img/EFR-109D-1A-ee5b0d.webp","E/EF/EFR/efr-109d-1a/assets/EFR-109D-1A_ToyotaMuseum2.jpg":"img/EFR-109D-1A_ToyotaMuseum2-3673ce.webp","E/EF/EFR/efr-109d-2a/assets/EFR-109D-2A_ToyotaMuseum3.jpg":"img/EFR-109D-2A_ToyotaMuseum3-e58980.webp","E/EF/EFR/efr-109d-2a/assets/EFR-109D-2A_ToyotaMuseum5.jpg":"img/EFR-109D-2A_ToyotaMuseum5-a51546.webp","E/EF/EFR/efr-109d-3a/assets/EFR-109D-3A_ToyotaMuseum2.jpg":"img/EFR-109D-3A_ToyotaMuseum2-52ab95.webp","E/EF/EFR/efr-109d-1a/assets/EFR-109D-1A_ToyotaMuseum3.jpg":"img/EFR-109D-1A_ToyotaMuseum3-9da316.webp","E/EF/EFR/efr-109d-2a/assets/EFR-109D-2A.png":"img/EFR-109D-2A-673476.webp","E/EF/EFR/efr-109d-3a/assets/EFR-109D-3A.png":"img/EFR-109D-3A-78cbe7.webp","E/EF/EFR/efr-109d-3a/assets/EFR-109D-3A_ToyotaMuseum4.jpg":"img/EFR-109D-3A_ToyotaMuseum4-ae8315.webp","E/EF/EFR/efr-109l-7a/assets/EFR-109L-7A.png":"img/EFR-109L-7A-8d6ee6.webp","E/EF/EFR/efr-109l-7a/assets/EFR-109L-7A_ToyotaMuseum3.jpg":"img/EFR-109L-7A_ToyotaMuseum3-9c4307.webp","E/EF/EFS/efs-s660pb-1a/assets/EFS-S660PB-1A.png":"img/EFS-S660PB-1A-109ab2.webp","E/EF/EFR/efr-109l-7a/assets/EFR-109L-7A_ToyotaMuseum1.jpg":"img/EFR-109L-7A_ToyotaMuseum1-014d03.webp","E/EF/EFS/efs-s660d-1a/assets/EFS-S660D-1A.png":"img/EFS-S660D-1A-ab67e2.webp","E/EF/efk/efk-200cd-1a/assets/EFK-200CD-1A.png":"img/EFK-200CD-1A-2a6e38.webp","E/EF/efk/efk-200cd-1a/assets/EFK-200CD-1A_wrist.jpg":"img/EFK-200CD-1A_wrist-5a6132.webp","E/EF/efk/efk-200cd-1a/assets/EFK-200CD-1A_model-free.jpg":"img/EFK-200CD-1A_model-free-2b1151.webp","E/EF/EFS/efs-s660pb-1a/assets/EFS-S660PB-1A_kv.jpg":"img/EFS-S660PB-1A_kv-147bc1.webp","E/EF/EFV/efv-160d-4av/assets/EFV-160D-4AV.png":"img/EFV-160D-4AV-704668.webp","E/EF/EFV/efv-160d-2bv/assets/EFV-160D-2BV.png":"img/EFV-160D-2BV-648833.webp","E/EF/efk/efk-200d-4a/assets/EFK-200D-4A.png":"img/EFK-200D-4A-f08de4.webp","E/EF/efk/efk-200d-2a/assets/EFK-200D-2A_wrist.jpg":"img/EFK-200D-2A_wrist-fccf06.webp","E/EF/efk/efk-200d-2a/assets/EFK-200D-2A.png":"img/EFK-200D-2A-759cb7.webp","E/EF/efk/efk-200d-2a/assets/EFK-200D-2A_model-free.jpg":"img/EFK-200D-2A_model-free-f7ff3b.webp","E/EF/efk/efk-200dg-5a/assets/EFK-200DG-5A.png":"img/EFK-200DG-5A-625c34.webp","E/EF/efk/efk-200d-4a/assets/EFK-200D-4A_wrist.jpg":"img/EFK-200D-4A_wrist-b816a2.webp","E/EF/efk/efk-200xpb-1a/assets/EFK-200XPB-1A.png":"img/EFK-200XPB-1A-13b050.webp","E/EF/efk/efk-200d-4a/assets/EFK-200D-4A_model-free.jpg":"img/EFK-200D-4A_model-free-322add.webp","E/EF/efk/efk-200dg-5a/assets/EFK-200DG-5A_model-free.jpg":"img/EFK-200DG-5A_model-free-2323d9.webp","E/EF/efk/efk-200dg-5a/assets/EFK-200DG-5A_square01.jpg":"img/EFK-200DG-5A_square01-d9e4b1.webp","E/EF/efk/efk-200xpb-1a/assets/EFK-200XPB-1A_wrist.jpg":"img/EFK-200XPB-1A_wrist-78d694.webp","E/EF/efk/efk-200xpb-1a/assets/EFK-200XPB-1A_kv.jpg":"img/EFK-200XPB-1A_kv-ad7dd7.webp","E/EQ/EQB/eqb-1300d-2a/assets/EQB-1300D-2A.png":"img/EQB-1300D-2A-2b7491.webp","E/EQ/EQB/eqb-1300d-5a/assets/EQB-1300D-5A_front.jpg":"img/EQB-1300D-5A_front-9786fb.webp","E/EQ/EQB/eqb-1300d-5a/assets/EQB-1300D-5A_wrist.jpg":"img/EQB-1300D-5A_wrist-42f210.webp","E/EQ/EQB/eqb-1300d-5a/assets/EQB-1300D-5A.png":"img/EQB-1300D-5A-a3836b.webp","E/EQ/EQB/eqb-1300d-2a/assets/EQB-1300D-2A_wrist.jpg":"img/EQB-1300D-2A_wrist-cb7886.webp","E/EQ/EQB/eqb-1300d-2a/assets/EQB-1300D-2A_kv.jpg":"img/EQB-1300D-2A_kv-fe3b32.webp","E/EF/efk/efk-110d-1a/assets/EFK-110D-1A.png":"img/EFK-110D-1A-33e569.webp","E/EQ/EQB/eqb-1300dc-3a/assets/EQB-1300DC-3A.png":"img/EQB-1300DC-3A-1c84b6.webp","E/EQ/EQB/eqb-1300dc-3a/assets/EQB-1300DC-3A_front.jpg":"img/EQB-1300DC-3A_front-b2e298.webp","E/EF/efk/efk-110d-2a/assets/EFK-110D-2A.png":"img/EFK-110D-2A-7c9545.webp","E/EQ/EQB/eqb-1300dc-3a/assets/EQB-1300DC-3A_wrist.jpg":"img/EQB-1300DC-3A_wrist-483132.webp","E/EF/efk/efk-110d-1a/local-assets/EFK-110D-1A_back.jpg":"img/EFK-110D-1A_back-29df9f.webp","E/EF/efk/efk-110d-2a/assets/EFK-110D-2A_wrist.jpg":"img/EFK-110D-2A_wrist-0923dc.webp","E/EF/efk/efk-110d-1a/assets/EFK-110D-1A_wrist.jpg":"img/EFK-110D-1A_wrist-f703ef.webp","E/EF/efk/efk-110d-7a/assets/EFK-110D-7A.png":"img/EFK-110D-7A-6812b5.webp","E/EF/efk/efk-110d-2a/assets/EFK-110D_feature_2-2_sp.jpg":"img/EFK-110D_feature_2-2_sp-eb807b.webp","E/EF/efk/efk-110d-7a/assets/EFK-110D-7A_wrist.jpg":"img/EFK-110D-7A_wrist-a13679.webp","E/EF/efk/efk-110d-7a/local-assets/EFK-110D-7A_Wristshot.jpg":"img/EFK-110D-7A_Wristshot-db86af.webp","E/EF/EFB/efb-109d-3av/assets/EFB-109D-3AV.png":"img/EFB-109D-3AV-247598.webp","E/EF/EFR/efr-575c-8a/assets/EFR-575C-8A.png":"img/EFR-575C-8A-8fb634.webp","E/EF/EFR/efr-575d-4a/assets/EFR-575D-4A.png":"img/EFR-575D-4A-54f920.webp","E/EF/EFR/efr-575d-4a/assets/EFR-575D-1A_image.png":"img/EFR-575D-1A_image-d16b36.webp","E/EF/EFB/efb-109d-5av/assets/EFB-109D-5AV.png":"img/EFB-109D-5AV-2c73e0.webp","E/EF/EFR/efr-575cl-5a/assets/EFR-575CL-5A.png":"img/EFR-575CL-5A-699a08.webp","E/EC/ECB/ecb-2300d-1a/assets/ECB-2300D_kv.jpg":"img/ECB-2300D_kv-5e9eff.webp","E/EC/ECB/ecb-2300d-1a/assets/ECB-2300D_feature_1_en.jpg":"img/ECB-2300D_feature_1_en-7f9251.webp","E/EC/ECB/ecb-2300d-2a/assets/ECB-2300D-2A_front.jpg":"img/ECB-2300D-2A_front-c5f9b2.webp","E/EC/ECB/ecb-2300d-2a/assets/ECB-2300D-2A.png":"img/ECB-2300D-2A-fc7bb1.webp","E/EC/ECB/ecb-2300d-1a/assets/ECB-2300D-1A.png":"img/ECB-2300D-1A-be17e5.webp","E/EC/ECB/ecb-2300d-2a/assets/ECB-2300D_feature_1_en.jpg":"img/ECB-2300D_feature_1_en-32d964.webp","E/EC/ECB/ecb-2300dc-1a/assets/ECB-2300D_feature_1_en.jpg":"img/ECB-2300D_feature_1_en-343889.webp","E/EC/ECB/ecb-2300dc-1a/assets/ECB-2300DC-1A.png":"img/ECB-2300DC-1A-9720cc.webp","E/EC/ECB/ecb-2300dc-1a/assets/ECB-2300DC-1A_front.jpg":"img/ECB-2300DC-1A_front-701459.webp","E/EF/EFB/efb-730d-2bv/assets/EFB-730D-2BVU.png":"img/EFB-730D-2BVU-14d44a.webp","E/EF/EFB/efb-730d-3av/assets/EFB-730D-3AVU.png":"img/EFB-730D-3AVU-c8d7c0.webp","E/EF/EFV/efv-160d-1av/assets/EFV-160D-1AV.png":"img/EFV-160D-1AV-98f415.webp","E/EF/EFB/efb-730l-7av/assets/EFB-730L-7AVU.png":"img/EFB-730L-7AVU-d714ea.webp","E/EF/EFV/efv-160d-2av/assets/EFV-160D-2AV.png":"img/EFV-160D-2AV-050692.webp","E/EF/EFV/efv-160d-3av/assets/EFV-160D-3AV.png":"img/EFV-160D-3AV-6ca54b.webp","E/EF/EFR/efr-s108de-2av/assets/EFR-S108DE-2AVU.png":"img/EFR-S108DE-2AVU-805383.webp","E/EF/EFR/efr-s108de-2av/local-assets/EFR-S108DE-2AVUEF_Lifestyle_1.jpg":"img/EFR-S108DE-2AVUEF_Lifestyle_1-874c93.webp","E/EF/EFR/efr-s108de-3av/local-assets/EFR-S108DE-3AVUEF_Lifestyle_1.jpg":"img/EFR-S108DE-3AVUEF_Lifestyle_1-e45b31.webp","E/EF/EFR/efr-s108de-3av/local-assets/EFR-S108DE-3AVUEF_Lifestyle_2.jpg":"img/EFR-S108DE-3AVUEF_Lifestyle_2-07f41c.webp","E/EF/EFR/efr-s108de-8av/assets/EFR-S108DE-8AVU.png":"img/EFR-S108DE-8AVU-0e4b14.webp","E/EF/EFR/efr-s108de-2av/local-assets/EFR-S108DE-2AVUEF_Lifestyle_2.jpg":"img/EFR-S108DE-2AVUEF_Lifestyle_2-74b587.webp","E/EF/EFR/efr-s108de-8av/local-assets/EFR-S108DE-8AVUEF_Lifestyle_1.jpg":"img/EFR-S108DE-8AVUEF_Lifestyle_1-9cc693.webp","E/EF/EFV/efv-160d-7av/assets/EFV-160D-7AV.png":"img/EFV-160D-7AV-c92f4d.webp","E/EF/EFR/efr-s108de-3av/assets/EFR-S108DE-3AVU.png":"img/EFR-S108DE-3AVU-94b1e4.webp","E/EF/EFR/efr-539de-3av/assets/EFR-539DE-3AVU.png":"img/EFR-539DE-3AVU-cf94f7.webp","E/EF/EFR/efr-s108de-8av/local-assets/EFR-S108DE-8AVUEF_Lifestyle_2.jpg":"img/EFR-S108DE-8AVUEF_Lifestyle_2-0c6827.webp","E/EF/EFS/efs-s650d-2a/assets/EFS-S650D-2A.png":"img/EFS-S650D-2A-83c818.webp","E/EF/EFR/efr-539de-8av/assets/EFR-539DE-8AVU.png":"img/EFR-539DE-8AVU-0f0665.webp","E/EF/EFR/efr-539de-2av/assets/EFR-539DE-2AVU.png":"img/EFR-539DE-2AVU-1b40b3.webp","E/EF/EFS/efs-s650d-2a/assets/EFS-S650D-2A_kv.jpg":"img/EFS-S650D-2A_kv-866e75.webp","E/EF/EFS/efs-s650d-2a/assets/EFS-S650_feature_1.jpg":"img/EFS-S650_feature_1-411bc7.webp","E/EF/EFS/efs-s650d-3a/assets/EFS-S650D-3A_front.jpg":"img/EFS-S650D-3A_front-f25360.webp","E/EF/EFS/efs-s650d-3a/assets/EFS-S650D-3A.png":"img/EFS-S650D-3A-5236e5.webp","E/EF/EFS/efs-s650d-3a/assets/EFS-S650D-3A_feature_3.jpg":"img/EFS-S650D-3A_feature_3-cfe500.webp","E/EF/EFS/efs-s650dc-1a/assets/EFS-S650DC-1A_front.jpg":"img/EFS-S650DC-1A_front-84d2c2.webp","E/EF/EFS/efs-s650dc-1a/assets/EFS-S650DC-1A_feature_3.jpg":"img/EFS-S650DC-1A_feature_3-3b0feb.webp","E/EF/EFS/efs-s650dc-1a/assets/EFS-S650DC-1A.png":"img/EFS-S650DC-1A-f68e49.webp","E/EF/efk/efk-100d-3a/assets/EFK-100D-3A.png":"img/EFK-100D-3A-2d4ed1.webp","E/EF/efk/efk-100d-3a/local-assets/EFK-100D-3AER_Lifestyle_Wristshot.jpg":"img/EFK-100D-3AER_Lifestyle_Wristshot-62945d.webp","E/EF/efk/efk-100d-3a/local-assets/EFK-100D-3AER_Lifestyle_Outfit.jpg":"img/EFK-100D-3AER_Lifestyle_Outfit-564076.webp","E/EF/EFV/efv-610ecl-1a/assets/EFV-610ECL-1AU.png":"img/EFV-610ECL-1AU-c74ec0.webp","E/EF/EFR/efr-575l-7a/assets/EFR-575L-7AEF_EDIFICE_onfigure_1050x1050.jpg":"img/EFR-575L-7AEF_EDIFICE_onfigure_1050x1050-622f3b.webp","E/EF/EFR/efr-575l-7a/assets/EFR-575L-7AEF_EDIFICE_onfigure_car_1050x1050.jpg":"img/EFR-575L-7AEF_EDIFICE_onfigure_car_1050x1050-2e78ab.webp","E/EF/EFR/efr-575l-7a/assets/EFR-575L-7A.png":"img/EFR-575L-7A-476a05.webp","E/EF/EFV/efv-610el-5a/assets/EFV-610EL-5AU.png":"img/EFV-610EL-5AU-171606.webp","E/EF/EFB/efb-109d-1av/assets/EFB-109D-1AV_wrist2.jpg":"img/EFB-109D-1AV_wrist2-dffef9.webp","E/EF/EFB/efb-109d-1av/assets/EFB-109D-1AV.png":"img/EFB-109D-1AV-30f6c6.webp","E/EF/EFB/efb-109d-2av/assets/EFB-109D-2AV.png":"img/EFB-109D-2AV-794605.webp","E/EF/EFB/efb-109d-2av/assets/EFB-109D-2AV_wrist1.jpg":"img/EFB-109D-2AV_wrist1-a276bc.webp","E/EF/EFB/efb-109d-2av/assets/EFB-109D-2AV_wrist2.jpg":"img/EFB-109D-2AV_wrist2-70dba7.webp","E/EF/EFB/efb-109d-1av/assets/EFB-109D-1AV_wrist1.jpg":"img/EFB-109D-1AV_wrist1-81937b.webp","E/EF/EFB/efb-109d-7av/assets/EFB-109D-7AV.png":"img/EFB-109D-7AV-c2fde5.webp","E/EF/EFB/efb-109d-7av/assets/EFB-109D-7AV_wrist1.jpg":"img/EFB-109D-7AV_wrist1-a40b77.webp","E/EF/EFB/efb-109d-7av/assets/EFB-109D-7AV_wrist2.jpg":"img/EFB-109D-7AV_wrist2-6a07c9.webp","E/EF/EFR/efr-575cl-3a/assets/EFR-575CL-3A.png":"img/EFR-575CL-3A-163e25.webp","E/EF/EFR/efr-575cl-3a/assets/EFR-575CL-3AEF_EDIFICE_onfigure_2_1050x1050.jpg":"img/EFR-575CL-3AEF_EDIFICE_onfigure_2_1050x1050-86e53b.webp","E/EF/EFR/efr-575cl-3a/assets/EFR-575CL-3AEF_EDIFICE_onfigure_1050x1050.jpg":"img/EFR-575CL-3AEF_EDIFICE_onfigure_1050x1050-e95e9f.webp","E/EF/EFR/efr-575d-1a/assets/EFR-575D-1A_image.png":"img/EFR-575D-1A_image-5e3eea.webp","E/EF/EFR/efr-575d-1a/assets/EFR-575D-1AEF_EDIFICE_onfigure_2_1050x1050.jpg":"img/EFR-575D-1AEF_EDIFICE_onfigure_2_1050x1050-5df9ed.webp","E/EF/EFR/efr-575d-1a/assets/EFR-575D-1A.png":"img/EFR-575D-1A-0a961c.webp","E/EC/ECB/ecb-s10d-2a/assets/ECB-S10D-2A.png":"img/ECB-S10D-2A-4ca90a.webp","E/EF/EFR/efr-575d-2a/assets/EFR-575D-2A.png":"img/EFR-575D-2A-01028d.webp","E/EF/EFR/efr-575d-2a/local-assets/EFR-575D-2A_lifestyle.jpg":"img/EFR-575D-2A_lifestyle-4cf06d.webp","E/EF/EFR/efr-575d-2a/local-assets/EFR-575D-2A_wristshot.jpg":"img/EFR-575D-2A_wristshot-d4b546.webp","E/EC/ECB/ecb-s10d-2a/assets/ECB-S10D-2A_wrist1.jpg":"img/ECB-S10D-2A_wrist1-bbc407.webp","E/EC/ECB/ecb-s10d-2a/assets/ECB-S10D-2A_LED.png":"img/ECB-S10D-2A_LED-4ff7a8.webp","E/EC/ECB/ecb-s10d-8a/assets/ECB-S10D-8A_kv.jpg":"img/ECB-S10D-8A_kv-2b77ba.webp","E/EC/ECB/ecb-s10d-8a/assets/ECB-S10_feature_1-1.jpg":"img/ECB-S10_feature_1-1-675405.webp","E/EC/ECB/ecb-s10d-8a/assets/ECB-S10D-8A.png":"img/ECB-S10D-8A-5e131a.webp","E/EF/EFS/efs-s570d-3a/assets/EFS-S570D-3AU.png":"img/EFS-S570D-3AU-eb2247.webp","E/EF/EFV/efv-640d-3av/assets/EFV-640D-3AV.png":"img/EFV-640D-3AV-263c28.webp","E/EC/ECB/ecb-10db-1a9/assets/ECB-10DB-1A9.png":"img/ECB-10DB-1A9-98f1c2.webp","E/EF/EFS/efs-s570d-5a/assets/EFS-S570D-5AU.png":"img/EFS-S570D-5AU-f4f886.webp","E/EF/EFB/efb-730d-1av/local-assets/EFB-730D-1AV_offigure_2000x2000.jpg":"img/EFB-730D-1AV_offigure_2000x2000-990c47.webp","E/EF/EFB/efb-730d-1av/assets/EFB-730D-1AV.png":"img/EFB-730D-1AV-d93c3b.webp","E/EF/EFB/efb-730d-1av/assets/EFB-730D-1AV_wrist.jpg":"img/EFB-730D-1AV_wrist-66d360.webp","E/EF/EFB/efb-730d-2av/assets/EFB-730D-2AV.png":"img/EFB-730D-2AV-46339e.webp","E/EF/EFB/efb-730d-2av/local-assets/EFB-730D-2AV_offigure_2000x2000.jpg":"img/EFB-730D-2AV_offigure_2000x2000-e4bd71.webp","E/EF/EFB/efb-730d-2av/assets/EFB-730D-2AV_wrist01.jpg":"img/EFB-730D-2AV_wrist01-fdad8b.webp","E/EC/ECB/ecb-2000cb-2a/assets/ECB-2000CB-2A.png":"img/ECB-2000CB-2A-6655da.webp","E/EF/EFB/efb-730d-7av/assets/EFB-730D-7AV.png":"img/EFB-730D-7AV-0cdafd.webp","E/EF/EFB/efb-730d-7av/local-assets/EFB-730D-7AV_offigure_2000x2000.jpg":"img/EFB-730D-7AV_offigure_2000x2000-4fb7d5.webp","E/EF/EFB/efb-730d-7av/assets/EFB-730D-7AV_wrist.jpg":"img/EFB-730D-7AV_wrist-e5761d.webp","E/EF/EFV/efv-100d-8av/assets/EFV-100D-8AVU.png":"img/EFV-100D-8AVU-c635aa.webp","E/EC/ECB/ecb-2000cb-2a/assets/COOL-BLUE_kv_overseas.jpg":"img/COOL-BLUE_kv_overseas-f23aea.webp","E/EC/ECB/ecb-2000cb-2a/assets/ECB-2000CB-2A_feature_01_2.jpg":"img/ECB-2000CB-2A_feature_01_2-3adb42.webp","E/EF/EFV/efv-150cl-2av/assets/EFV-150CL-2AV.png":"img/EFV-150CL-2AV-2eb211.webp","E/EF/EFV/efv-100d-2bv/assets/EFV-100D-2BVU.png":"img/EFV-100D-2BVU-dee929.webp","E/EF/EFV/efv-100d-9av/assets/EFV-100D-9AVU.png":"img/EFV-100D-9AVU-739d04.webp","E/EF/EFR/efr-526d-2av/assets/EFR-526D-2AVU.png":"img/EFR-526D-2AVU-469725.webp","E/EF/EFV/efv-150d-1av/assets/EFV-150D-1AV.png":"img/EFV-150D-1AV-bda425.webp","E/EF/EFV/efv-150d-2av/assets/EFV-150D-2AV.png":"img/EFV-150D-2AV-ff27ab.webp","E/EF/EFR/efr-552d-2av/assets/EFR-552D-2AVU.png":"img/EFR-552D-2AVU-61da15.webp","E/EF/EFV/efv-c120l-8a/assets/EFV-C120L-8A.png":"img/EFV-C120L-8A-2ab682.webp","E/EQ/EQS/eqs-940nl-1av/assets/EQS-940NL-1AVU.png":"img/EQS-940NL-1AVU-d86729.webp","E/EF/EFR/efr-526d-3av/assets/EFR-526D-3AVU.png":"img/EFR-526D-3AVU-7dc855.webp","E/EQ/EQS/eqs-940nl-1av/assets/ECB-940NP-1A_03_en.jpg":"img/ECB-940NP-1A_03_en-33d0c1.webp","E/EF/EFR/efr-552l-5av/assets/EFR-552L-5AVU.png":"img/EFR-552L-5AVU-959529.webp","E/EQ/EQS/eqs-940nl-1av/assets/ECB-940NP-1A_img.jpg":"img/ECB-940NP-1A_img-1640f3.webp","E/EF/EFV/efv-540dc-1cv/assets/EFV-540DC-1CVU.png":"img/EFV-540DC-1CVU-e92c6b.webp","E/EF/EFS/efs-s630bl-5av/local-assets/EFS-S630BL-5AVUEF_Lifestyle_offfigure1.jpg":"img/EFS-S630BL-5AVUEF_Lifestyle_offfigure1-35cca1.webp","E/EC/ECB/ecb-40pb-1a/assets/ECB-40PB-1A.png":"img/ECB-40PB-1A-c7d288.webp","E/EF/EFS/efs-s630bl-5av/assets/EFS-S630BL-5AVU.png":"img/EFS-S630BL-5AVU-8d0c82.webp","E/EF/EFR/efr-s108d-2av/assets/EFR-S108D-2AVU.png":"img/EFR-S108D-2AVU-087ebc.webp","E/EF/EFR/efr-s108d-2av/assets/EFR-S108D_kv.jpg":"img/EFR-S108D_kv-67a400.webp","E/EF/EFS/efs-s630bl-5av/local-assets/EFS-S630BL-5AVUEF_Lifestyle_offfigure2.jpg":"img/EFS-S630BL-5AVUEF_Lifestyle_offfigure2-826eab.webp","E/EC/ECB/ecb-950db-1a/assets/ECB-950DB-1A_02.jpg":"img/ECB-950DB-1A_02-6935dd.webp","E/EC/ECB/ecb-950db-1a/assets/ECB-950DB-1A_01.jpg":"img/ECB-950DB-1A_01-66c265.webp","E/EF/EFR/efr-s108d-3av/assets/EFR-S108D_kv.jpg":"img/EFR-S108D_kv-dfde66.webp","E/EF/EFR/efr-s108d-3av/assets/EFR-S108D-3AVU.png":"img/EFR-S108D-3AVU-79bbf9.webp","E/EC/ECB/ecb-950db-2a/assets/ECB-950DB-2A_02.jpg":"img/ECB-950DB-2A_02-29a7ff.webp","E/EC/ECB/ecb-950db-2a/assets/ECB-950DB-2A_01.jpg":"img/ECB-950DB-2A_01-f3738b.webp","E/EC/ECB/ecb-950db-1a/assets/ECB-950DB-1A.png":"img/ECB-950DB-1A-2c88a9.webp","E/EC/ECB/ecb-950db-2a/assets/ECB-950DB-2A.png":"img/ECB-950DB-2A-0989b8.webp","E/EC/ECB/ecb-950dc-1a/assets/ECB-950DC-1A_01.jpg":"img/ECB-950DC-1A_01-88f522.webp","E/EC/ECB/ecb-950dc-1a/assets/ECB-950DC-1A_02.jpg":"img/ECB-950DC-1A_02-f60e8b.webp","E/EC/ECB/ecb-950dc-1a/assets/ECB-950DC-1A.png":"img/ECB-950DC-1A-bf9736.webp","E/EC/ECB/ecb-2000d-1a/assets/ECB-2000D-1A_app_en.jpg":"img/ECB-2000D-1A_app_en-d07022.webp","E/EC/ECB/ecb-2000d-1a/assets/ECB-2000D-1A_front.jpg":"img/ECB-2000D-1A_front-574e87.webp","E/EF/EFV/efv-610d-3cv/assets/EFV-610D-3CVU.png":"img/EFV-610D-3CVU-f56833.webp","E/EC/ECB/ecb-2000d-1a/assets/ECB-2000D-1A.png":"img/ECB-2000D-1A-bd888c.webp","E/EC/ECB/ecb-30d-1a/assets/ECB-30D-1A.png":"img/ECB-30D-1A-4498b2.webp","E/EC/ECB/ecb-2000dc-1a/assets/ECB-2000DC-1A_front.jpg":"img/ECB-2000DC-1A_front-08f2ff.webp","E/EC/ECB/ecb-2000dc-1a/assets/ECB-2000DC-1A.png":"img/ECB-2000DC-1A-0af5ab.webp","E/EC/ECB/ecb-30d-2a/assets/ECB-30D-2A.png":"img/ECB-30D-2A-f030e4.webp","E/EF/EFB/efb-108d-1av/assets/EFB-108D-1AVU.png":"img/EFB-108D-1AVU-f43021.webp","E/EC/ECB/ecb-30d-1a/assets/ECB-30D-1A_Lifestyle02.jpg":"img/ECB-30D-1A_Lifestyle02-c91f2c.webp","E/EC/ECB/ecb-30d-1a/assets/ECB-30D-1A_kv.jpg":"img/ECB-30D-1A_kv-5b90ef.webp","E/EC/ECB/ecb-30d-2a/assets/ECB-30D-2A_01.jpg":"img/ECB-30D-2A_01-899d7d.webp","E/EF/EF5/EF-527D-2AV/assets/EF-527D-2AV_1.png":"img/EF-527D-2AV_1-79f962.webp","E/EF/EF5/EF-527D-2AV/local-assets/EF-527D-2AVUEF_OR02_wristshot_1050x1050_DE.jpg":"img/EF-527D-2AVUEF_OR02_wristshot_1050x1050_DE-dd930e.webp","E/EC/ECB/ecb-30d-2a/assets/ECB-30D-2A_01.png":"img/ECB-30D-2A_01-fbb2fb.webp","E/EF/EFV/efv-620d-1a4v/assets/EFV-620D-1A4VU.png":"img/EFV-620D-1A4VU-236757.webp","E/EF/EF5/EF-527D-3AV/assets/EF-527D-3AV_1.png":"img/EF-527D-3AV_1-17ecb4.webp","E/EF/EF5/EF-527D-3AV/local-assets/EF-527D-3AVUEF_OR02_wristshot_1050x1050_DE.jpg":"img/EF-527D-3AVUEF_OR02_wristshot_1050x1050_DE-3d259a.webp","E/EF/EFV/efv-620d-1a2v/assets/EFV-620D-1A2VU.png":"img/EFV-620D-1A2VU-39ee65.webp","E/EF/EFV/efv-620d-2av/assets/EFV-620D-2AVU.png":"img/EFV-620D-2AVU-a31cf6.webp","E/EF/EFV/efv-620d-1a4v/local-assets/EFV-620D-1A4VUEF_OR02_wristshot_1050x1050_DE.jpg":"img/EFV-620D-1A4VUEF_OR02_wristshot_1050x1050_DE-f307bd.webp","E/EF/EFV/efv-620d-2av/local-assets/EFV-620D-2AVUEF_OR02_wristshot_1050x1050_DE.jpg":"img/EFV-620D-2AVUEF_OR02_wristshot_1050x1050_DE-6cb562.webp","E/EF/EFV/efv-620l-1av/local-assets/EFV-620L-1AVUEF_OR02_wristshot_1050x1050_DE.jpg":"img/EFV-620L-1AVUEF_OR02_wristshot_1050x1050_DE-c64de4.webp","E/EF/EFR/EFR-S108D-1AV/assets/EFR-S108D-1AV_Seq1.png":"img/EFR-S108D-1AV_Seq1-bbacfe.webp","E/EF/EFV/efv-620l-1av/assets/EFV-620L-1AVU.png":"img/EFV-620L-1AVU-5b72ad.webp","E/EF/EFR/EFR-S108D-7AV/local-assets/EFR-S108D-7AVUEF_OR02_wristshot_1050x1050_DE.jpg":"img/EFR-S108D-7AVUEF_OR02_wristshot_1050x1050_DE-7244b4.webp","E/EF/EFV/EFV-610D-1AV/local-assets/EFV-610D-1AVUEF_OR02_wristshot_1050x1050_DE.jpg":"img/EFV-610D-1AVUEF_OR02_wristshot_1050x1050_DE-abb04b.webp","E/EF/EFV/EFV-610D-1AV/assets/EFV-610D-1AV_Seq1.png":"img/EFV-610D-1AV_Seq1-002a14.webp","E/EQ/EQB/EQB-1100D-1A/assets/EQB-1100D-1A_5.jpg":"img/EQB-1100D-1A_5-897c35.webp","E/EF/EFR/EFR-S108D-7AV/assets/EFR-S108D-7AV_Seq1.png":"img/EFR-S108D-7AV_Seq1-8003ee.webp","E/EQ/EQB/EQB-1100D-1A/assets/EQB-1100D-1A_Seq1.png":"img/EQB-1100D-1A_Seq1-721107.webp","E/EF/EFR/EFR-571D-1AV/assets/EFR-571D-1AV_2.jpg":"img/EFR-571D-1AV_2-4a11f6.webp","E/EQ/EQB/EQB-1100D-1A/assets/EQB-1100D-1A_6.jpg":"img/EQB-1100D-1A_6-ae6240.webp","E/EF/EFV/EFV-600D-2AV/assets/EFV-600D-2AV_2.jpg":"img/EFV-600D-2AV_2-b34460.webp","E/EF/EFR/EFR-571D-1AV/assets/EFR-571D-1AV_Seq1.png":"img/EFR-571D-1AV_Seq1-1f3aec.webp","E/EF/EFV/EFV-600D-2AV/assets/EFV-600D-2AV_Seq1.png":"img/EFV-600D-2AV_Seq1-613a09.webp","E/EC/ECB/ECB-900DB-1A/assets/ECB-900DB-1A_Seq02.jpg":"img/ECB-900DB-1A_Seq02-63fddb.webp","E/EC/ECB/ECB-900DB-1A/assets/ECB-900DB-1A_Seq03.jpg":"img/ECB-900DB-1A_Seq03-687568.webp","E/EC/ECB/ECB-900DB-1A/assets/ECB-900DB-1A_Seq01.png":"img/ECB-900DB-1A_Seq01-590745.webp","E/EF/EFS/EFS-S510D-1AV/assets/EFS-S510D-1AV_01.png":"img/EFS-S510D-1AV_01-543dfe.webp","E/EC/ECB/ECB-900DB-1B/assets/ECB-900DB-1B_Seq3.jpg":"img/ECB-900DB-1B_Seq3-059b75.webp","E/EC/ECB/ECB-900DB-1B/assets/ECB-900DB-1B_Seq2.jpg":"img/ECB-900DB-1B_Seq2-2d50a5.webp","E/EF/EFV/EFV-550P-1AV/assets/EFV-550P-1AV_Seq2.jpg":"img/EFV-550P-1AV_Seq2-672ab2.webp","E/EF/EFV/EFV-550P-1AV/assets/EFV-550P-1AV_Seq1.png":"img/EFV-550P-1AV_Seq1-fb4acc.webp","E/EF/EFV/EFV-550P-1AV/assets/EFV-550P-1AV_Seq3.jpg":"img/EFV-550P-1AV_Seq3-2997bc.webp","E/EC/ECB/ECB-900DB-1B/assets/ECB-900DB-1B_Seq1.png":"img/ECB-900DB-1B_Seq1-e46c9f.webp","E/EF/EFR/EFR-556D-1AV/assets/EFR-556D-1AV_01.png":"img/EFR-556D-1AV_01-8eb080.webp","E/EF/EFS/EFS-S510D-2AV/assets/EFS-S510D-2AV_01.png":"img/EFS-S510D-2AV_01-ff08b5.webp","E/EF/EFR/EFR-556DB-2AV/assets/EFR-556DB-2AV_01.png":"img/EFR-556DB-2AV_01-7bac8b.webp","E/EF/EFR/EFR-552D-1AV/assets/EFR-552D-1AV_Seq1.png":"img/EFR-552D-1AV_Seq1-90f201.webp","E/EF/EFR/EFR-556DB-1AV/assets/EFR-556DB-1AV_01.png":"img/EFR-556DB-1AV_01-fa4a2b.webp","E/EF/EFR/EFR-539D-1A2V/assets/EFR-539D-1A2V_Seq1.png":"img/EFR-539D-1A2V_Seq1-d22ce0.webp","E/EF/EFR/EFR-556L-1AV/assets/EFR-556L-1AV_01.png":"img/EFR-556L-1AV_01-9ad7db.webp","E/EF/EFR/EFR-552D-1A2V/assets/EFR-552D-1A2V_Seq1.png":"img/EFR-552D-1A2V_Seq1-10906e.webp","E/EF/EFR/EFR-539D-1A2V/assets/EFR-539D-1A2V_Seq3.jpg":"img/EFR-539D-1A2V_Seq3-323449.webp","E/EF/EFR/EFR-539D-1A2V/assets/EFR-539D-1A2V_Seq2.jpg":"img/EFR-539D-1A2V_Seq2-0df9a3.webp","E/EF/EF1/EF-129D-1AV/assets/EF-129D-1AV_01.png":"img/EF-129D-1AV_01-5cbc47.webp","E/EF/EF1/EF-129D-2AV/assets/EF-129D-2AV_2000x2000.png":"img/EF-129D-2AV_2000x2000-b1b396.webp","E/EF/EFR/EFR-526L-1AV/assets/EFR-526L-1AV_Seq1.png":"img/EFR-526L-1AV_Seq1-522c67.webp","E/EF/EFR/EFR-526D-1AV/assets/EFR-526D-1AV_Seq1.png":"img/EFR-526D-1AV_Seq1-b195f1.webp","E/EF/EFV/EFV-560D-1AV/assets/EFV-560D-1AV_1.png":"img/EFV-560D-1AV_1-919946.webp","E/EF/EF5/EF-539D-1AV/assets/EF-539D-1AV_Seq1.png":"img/EF-539D-1AV_Seq1-ee9f46.webp","E/EF/EF5/EF-527D-1AV/assets/EF-527D-1AV_01.png":"img/EF-527D-1AV_01-73c97c.webp","E/EF/EFV/EFV-560D-2AV/assets/EFV-560D-2AV_1.png":"img/EFV-560D-2AV_1-91ca95.webp"};
+const LOCAL={"E/EF/efk/efk-110d-1a":["E/EF/efk/efk-110d-1a/local-assets/EFK-110D-1A_back.jpg"],"E/EF/efk/efk-110d-7a":["E/EF/efk/efk-110d-7a/local-assets/EFK-110D-7A_Wristshot.jpg"],"E/EF/EFR/efr-s108de-2av":["E/EF/EFR/efr-s108de-2av/local-assets/EFR-S108DE-2AVUEF_Lifestyle_1.jpg","E/EF/EFR/efr-s108de-2av/local-assets/EFR-S108DE-2AVUEF_Lifestyle_2.jpg"],"E/EF/EFR/efr-s108de-3av":["E/EF/EFR/efr-s108de-3av/local-assets/EFR-S108DE-3AVUEF_Lifestyle_1.jpg","E/EF/EFR/efr-s108de-3av/local-assets/EFR-S108DE-3AVUEF_Lifestyle_2.jpg"],"E/EF/EFR/efr-s108de-8av":["E/EF/EFR/efr-s108de-8av/local-assets/EFR-S108DE-8AVUEF_Lifestyle_1.jpg","E/EF/EFR/efr-s108de-8av/local-assets/EFR-S108DE-8AVUEF_Lifestyle_2.jpg"],"E/EF/efk/efk-100d-3a":["E/EF/efk/efk-100d-3a/local-assets/EFK-100D-3AER_Lifestyle_Wristshot.jpg","E/EF/efk/efk-100d-3a/local-assets/EFK-100D-3AER_Lifestyle_Outfit.jpg"],"E/EF/EFR/efr-575d-2a":["E/EF/EFR/efr-575d-2a/local-assets/EFR-575D-2A_lifestyle.jpg","E/EF/EFR/efr-575d-2a/local-assets/EFR-575D-2A_wristshot.jpg"],"E/EF/EFB/efb-730d-1av":["E/EF/EFB/efb-730d-1av/local-assets/EFB-730D-1AV_offigure_2000x2000.jpg"],"E/EF/EFB/efb-730d-2av":["E/EF/EFB/efb-730d-2av/local-assets/EFB-730D-2AV_offigure_2000x2000.jpg"],"E/EF/EFB/efb-730d-7av":["E/EF/EFB/efb-730d-7av/local-assets/EFB-730D-7AV_offigure_2000x2000.jpg"],"E/EF/EFS/efs-s630bl-5av":["E/EF/EFS/efs-s630bl-5av/local-assets/EFS-S630BL-5AVUEF_Lifestyle_offfigure1.jpg","E/EF/EFS/efs-s630bl-5av/local-assets/EFS-S630BL-5AVUEF_Lifestyle_offfigure2.jpg"],"E/EF/EF5/EF-527D-2AV":["E/EF/EF5/EF-527D-2AV/local-assets/EF-527D-2AVUEF_OR02_wristshot_1050x1050_DE.jpg"],"E/EF/EF5/EF-527D-3AV":["E/EF/EF5/EF-527D-3AV/local-assets/EF-527D-3AVUEF_OR02_wristshot_1050x1050_DE.jpg"],"E/EF/EFV/efv-620d-1a4v":["E/EF/EFV/efv-620d-1a4v/local-assets/EFV-620D-1A4VUEF_OR02_wristshot_1050x1050_DE.jpg"],"E/EF/EFV/efv-620d-2av":["E/EF/EFV/efv-620d-2av/local-assets/EFV-620D-2AVUEF_OR02_wristshot_1050x1050_DE.jpg"],"E/EF/EFV/efv-620l-1av":["E/EF/EFV/efv-620l-1av/local-assets/EFV-620L-1AVUEF_OR02_wristshot_1050x1050_DE.jpg"],"E/EF/EFR/EFR-S108D-7AV":["E/EF/EFR/EFR-S108D-7AV/local-assets/EFR-S108D-7AVUEF_OR02_wristshot_1050x1050_DE.jpg"],"E/EF/EFV/EFV-610D-1AV":["E/EF/EFV/EFV-610D-1AV/local-assets/EFV-610D-1AVUEF_OR02_wristshot_1050x1050_DE.jpg"]};
+for(const f of FAMILIES)for(const mo of Object.values(f.m))for(const v of mo.v){const ex=LOCAL[v[3]]; if(ex) v[4]+=","+ex.map(k=>"@"+k).join(",");}
+
+</script>
+<script>
+const BASE="https://www.casio.com/content/dam/casio/product-info/locales/de/de/timepiece/product/watch/";
+const COL={black:["#1b1b1b","Schwarz"],blue:["#2350a8","Blau"],navy:["#1d2b4f","Marineblau"],green:["#2f6b45","Grün"],beige:["#d9c7a4","Beige"],brown:["#6e4527","Braun"],red:["#b3261e","Rot"],white:["#f3f1ec","Weiß"],silver:["#c8cacd","Silber"],grey:["#7c8086","Grau"],gold:["#caa54a","Gold"],rosegold:["#cc9a85","Roségold"],orange:["#e2791d","Orange"]};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const imgURL=(dir,f,size)=>(f.startsWith("@")?IMG[f.slice(1)]:IMG[dir+"/assets/"+f])||"";
+const cName=c=>c.split(",").map(x=>(COL[x]||[0,x])[1]).join("/");
+const cHex=c=>{const p=c.split(",").map(x=>(COL[x]||["#999"])[0]);return p.length>1?`linear-gradient(135deg,${p[0]} 50%,${p[1]} 50%)`:p[0];};
+const fmtP=p=>p?p.toLocaleString("de-DE",{minimumFractionDigits:p%1?2:0,maximumFractionDigits:2})+" €":"–";
+const mm=n=>String(n).replace(".",",");
+function fit(L){ if(L<=46) return [1,"Schmal bis mittel","passt schon ab ≈15 cm Handgelenk-Umfang"]; if(L<=49) return [2,"Mittel","ideal bei ≈16–19 cm"]; if(L<=52) return [2.5,"Mittel bis kräftig","ideal ab ≈17 cm"]; return [3,"Kräftig","eher ab ≈18 cm"]; }
+
+// ---- Daten aufbereiten
+const FAM=FAMILIES.map(f=>{
+  const vars=[];
+  for(const [mk,mo] of Object.entries(f.m)){
+    const spec={...f.d,...mo}; delete spec.v;
+    for(const v of mo.v){ const [code,price,cols,dir,imgs,out,label]=v; const [face,bezel,band]=cols.split("/");
+      vars.push({code,price,face,bezel,band,dir,imgs:imgs.split(",").filter(Boolean),out:!!out,label:label||"",model:mk,spec}); }
+  }
+  const priced=vars.filter(v=>v.price>0).map(v=>v.price);
+  const sp=vars.map(v=>v.spec);
+  const B=Math.min(...sp.map(s=>s.s[1])), L=Math.min(...sp.map(s=>s.s[0])), H=Math.min(...sp.map(s=>s.s[2]));
+  const sapph=sp.some(s=>/Saphir/.test(s.gl));
+  const kind=/Analog-Digital/.test(f.t)?"ad":/Chrono/i.test(f.t)?"chrono":"3z";
+  const avail=vars.some(v=>!v.out&&v.price>0);
+  const text=[f.n,f.t,f.mv,f.ben,...f.fn,...vars.map(v=>v.code+" "+cName(v.face)+" "+cName(v.band)+" "+v.spec.band)].join(" ").toLowerCase();
+  // Startvariante: erste lieferbare
+  const start=Math.max(0,vars.findIndex(v=>!v.out&&v.price>0));
+  return {...f,vars,pmin:priced.length?Math.min(...priced):0,pmax:priced.length?Math.max(...priced):0,B,L,H,sapph,kind,avail,text,sel:start};
+});
+
+// ---- Stats
+const nVar=FAM.reduce((a,f)=>a+f.vars.length,0);
+const allP=FAM.flatMap(f=>f.vars.filter(v=>v.price>0).map(v=>v.price));
+document.getElementById("stats").innerHTML=[
+  [FAM.length,"Modellreihen"],[nVar,"Farbvarianten"],[fmtP(Math.min(...allP))+" – "+fmtP(Math.max(...allP)),"Preisspanne"],
+  [FAM.filter(f=>f.mv==="Automatik").length+" / "+FAM.filter(f=>/Solar/.test(f.mv)).length+" / "+FAM.filter(f=>f.bt).length,"Automatik / Solar / Bluetooth"]
+].map(([b,s])=>`<div class="stat"><b class="num">${b}</b><span>${s}</span></div>`).join("");
+
+// ---- Filter-State
+const st={q:"",mv:"",typ:"",size:"",wrist:"",bt:false,sg:false,avail:false,sort:"price"};
+const cmp=new Set();
+function pass(f){
+  if(st.q && !st.q.split(/\s+/).every(w=>f.text.includes(w))) return false;
+  if(st.mv && f.mv!==st.mv) return false;
+  if(st.typ && f.kind!==st.typ) return false;
+  if(st.size==="s" && !(f.B<=40)) return false;
+  if(st.size==="m" && !(f.B>40&&f.B<=45)) return false;
+  if(st.size==="l" && !(f.B>45)) return false;
+  if(st.wrist){ const w=+st.wrist, fl=fit(f.L)[0]; if(w===1&&fl>1) return false; if(w===2&&fl>2.5) return false; }
+  if(st.bt && !f.bt) return false;
+  if(st.sg && !f.sapph) return false;
+  if(st.avail && !f.avail) return false;
+  return true;
+}
+const sorters={price:(a,b)=>(a.pmin||9e9)-(b.pmin||9e9),"-price":(a,b)=>b.pmax-a.pmax,size:(a,b)=>a.B-b.B||a.L-b.L,"-size":(a,b)=>b.B-a.B,thin:(a,b)=>a.H-b.H,colors:(a,b)=>b.vars.length-a.vars.length,new:(a,b)=>(b.isNew||0)-(a.isNew||0)||(a.pmin-b.pmin)};
+
+function priceLine(f,v){
+  if(!v.price) return `<span class="price">–</span> <small class="stock no">derzeit ausverkauft</small>`;
+  return `<span class="price num">${fmtP(v.price)}</span>`+(f.pmin!==f.pmax?` <small class="num">(Reihe ${fmtP(f.pmin)}–${fmtP(f.pmax)})</small>`:"");
+}
+// ---- Merkliste (pro Farbvariante, im Browser gespeichert)
+const FKEY="edifice-favs-v1";
+let favs=[]; try{ favs=JSON.parse(localStorage.getItem(FKEY)||"[]"); }catch(e){ favs=[]; }
+const isFav=code=>favs.includes(code);
+let favRef=null, writing=Promise.resolve();
+function saveLocal(){ try{ localStorage.setItem(FKEY,JSON.stringify(favs)); }catch(e){} }
+function toggleFav(code){ favs=isFav(code)?favs.filter(c=>c!==code):[...favs,code]; saveLocal(); updFavN();
+  if(favRef){ const snap=[...favs]; writing=writing.then(()=>favRef.set({codes:snap,updated:new Date().toISOString()})).catch(()=>{}); } }
+// Merkliste im Claude-Konto speichern, damit sie auf iPhone und Mac gleich ist
+(async()=>{ try{
+  if(!window.claude||!window.claude.use) return;
+  const [db,user]=await Promise.all([window.claude.use("db"),window.claude.use("user")]);
+  const uid=user?await user.id():null; if(!db||!uid) return;
+  favRef=db.collection("data/users/"+uid).doc("edifice-favs");
+  const first=await favRef.get();
+  if(!first.exists && favs.length){ await favRef.set({codes:[...favs],updated:new Date().toISOString()}); }
+  document.getElementById("syncNote").textContent="Sie wird in deinem Claude-Konto gespeichert und ist auf iPhone und Mac gleich.";
+  favRef.onSnapshot(s=>{ if(s.metadata.hasPendingWrites) return; const c=s.exists?(s.data().codes||[]):null; if(!Array.isArray(c)) return;
+    if(JSON.stringify(c)!==JSON.stringify(favs)){ favs=c.filter(x=>typeof x==="string"); saveLocal(); updFavN(); render(); } },()=>{});
+}catch(e){} })();
+function updFavN(){ document.getElementById("favN").textContent=favs.length; }
+const HEART='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.3-4.5-9.3-9C1.3 8.2 3.3 4.6 6.9 4.6c2 0 3.6 1.1 5.1 2.9 1.5-1.8 3.1-2.9 5.1-2.9 3.6 0 5.6 3.6 4.2 6.9-2 4.5-9.3 9-9.3 9z"/></svg>';
+let tab="all";
+function swatches(f,cls=""){
+  return f.vars.map((v,i)=>`<button class="${v.out?"out":""}${isFav(v.code)?" fav":""}" style="background:${cHex(v.face)};border-color:${(COL[v.bezel.split(",")[0]]||["#ccc"])[0]}" aria-pressed="${i===f.sel}" data-i="${i}" title="${esc(v.code)} · Zifferblatt ${cName(v.face)} · Band ${cName(v.band)}${v.out?" · ausverkauft":""}"></button>`).join("");
+}
+function card(f,vi=f.sel,favMode=false){
+  const v=f.vars[vi], s=v.spec;
+  const b=[f.isNew?'<span class="bdg new">Neu</span>':"",f.bt?'<span class="bdg bt">Bluetooth</span>':"",'<span class="bdg">'+f.mv+'</span>',(!v.price||v.out)?'<span class="bdg out">ausverkauft</span>':""].join("");
+  return `<article class="card" data-id="${f.id}" data-vi="${vi}" data-fm="${favMode?1:0}">
+    <div class="pic" data-open="${f.id}" data-ovi="${vi}"><div class="badges">${b}</div><button class="heart" data-fav="${esc(v.code)}" aria-pressed="${isFav(v.code)}" title="${isFav(v.code)?"Aus Merkliste entfernen":"Diese Farbe merken"}">${HEART}</button><img loading="lazy" src="${imgURL(v.dir,v.imgs[0],"product-panel")}" alt="${esc(v.code)}" onerror="this.style.opacity=.15"></div>
+    <div class="body">
+      <div><h3>${esc(f.n)}</h3><div class="type">${esc(f.t)} · ${f.disp}</div></div>
+      <div class="row">${priceLine(f,v)}</div>
+      <div class="vcode">${esc(v.code)} · ${cName(v.face)} / ${esc(s.band.replace(" (Faltschließe)",""))}</div>
+      <div class="keys"><div><b class="num">${mm(s.s[1])}</b><span>Ø mm</span></div><div><b class="num">${mm(s.s[0])}</b><span>L mm</span></div><div><b class="num">${mm(s.s[2])}</b><span>H mm</span></div><div><b class="num">${s.w}</b><span>g</span></div></div>
+      ${favMode?`<div class="type">Gemerkte Farbe · ${f.vars.length>1?`${f.vars.length} Farben in dieser Reihe`:"einzige Farbe"}</div>`:`<div class="sw" data-sw="${f.id}">${swatches(f)}</div>`}
+      <p class="ben">${esc(f.ben)}</p>
+      <div class="actions"><button class="btn primary" data-open="${f.id}" data-ovi="${vi}">Details & Fotos</button><button class="btn" data-cmp="${f.id}" aria-pressed="${cmp.has(f.id)}">${cmp.has(f.id)?"✓ Im Vergleich":"+ Vergleich"}</button></div>
+    </div></article>`;
+}
+function render(){
+  const g=document.getElementById("grid");
+  document.getElementById("favHint").hidden=tab!=="fav";
+  if(tab==="fav"){
+    // jede gemerkte Farbvariante als eigene Karte, Reihenfolge = Sortierung der Reihen, Filter gelten mit
+    const items=[];
+    for(const f of FAM.filter(pass).sort(sorters[st.sort])) f.vars.forEach((v,i)=>{ if(isFav(v.code)) items.push([f,i]); });
+    if(st.sort==="price") items.sort((a,b)=>(a[0].vars[a[1]].price||9e9)-(b[0].vars[b[1]].price||9e9));
+    if(st.sort==="-price") items.sort((a,b)=>b[0].vars[b[1]].price-a[0].vars[a[1]].price);
+    g.innerHTML=items.length?items.map(([f,i])=>card(f,i,true)).join(""):`<div class="empty">${favs.length?"Keine gemerkte Uhr passt zu den aktuellen Filtern.":"Noch nichts gemerkt – tippe bei einer Uhr auf das Herz oben rechts im Bild."}</div>`;
+    const sum=items.reduce((a,[f,i])=>a+(f.vars[i].price||0),0);
+    document.getElementById("count").textContent=`${items.length} gemerkt`+(items.length>1?` · zusammen ${fmtP(sum)}`:"");
+    return;
+  }
+  const list=FAM.filter(pass).sort(sorters[st.sort]);
+  g.innerHTML=list.length?list.map(f=>card(f)).join(""):'<div class="empty">Keine Uhr passt zu diesen Filtern.</div>';
+  document.getElementById("count").textContent=`${list.length} von ${FAM.length} Modellreihen · ${list.reduce((a,f)=>a+f.vars.length,0)} Farben`;
+}
+function setTab(t){ tab=t; document.getElementById("tabAll").setAttribute("aria-selected",t==="all"); document.getElementById("tabFav").setAttribute("aria-selected",t==="fav"); render(); }
+document.getElementById("tabAll").onclick=()=>setTab("all");
+document.getElementById("tabFav").onclick=()=>setTab("fav");
+const byId=id=>FAM.find(f=>f.id===id);
+
+// ---- Detail-Dialog
+const dlg=document.getElementById("dlg");
+function specRows(f,v){
+  const s=v.spec, fi=fit(s.s[0]);
+  const rows=[
+    ["Preis (Casio-Shop)",v.price?fmtP(v.price):"kein Preis – ausverkauft"],
+    ["Verfügbarkeit",(v.out||!v.price)?'<span class="stock no">ausverkauft im Casio-Shop</span>':'<span class="stock ok">lieferbar</span>'],
+    ["Farben",`Zifferblatt ${cName(v.face)} · Lünette ${cName(v.bezel)} · Band ${cName(v.band)}`],
+    ["Gehäuse (L × Ø × H)",`${mm(s.s[0])} × ${mm(s.s[1])} × ${mm(s.s[2])} mm`],
+    ["Gewicht",s.w+" g"],
+    ["Gehäusematerial",esc(s.mat)+(s.fin?" · "+esc(s.fin):"")],
+    ["Armband",esc(s.band)],
+    ["Bandlänge / Handgelenk",s.br?`passt für ${mm(s.br[0]/10)}–${mm(s.br[1]/10)} cm Umfang`:"keine Angabe bei Casio (Stahlband i. d. R. ca. 15–20,5 cm)"],
+    ["Glas",esc(s.gl)],
+    ["Werk / Energie",`<b>${f.mv}</b> – ${esc(s.pow)}`],
+  ];
+  if(s.run) rows.push(["Laufzeit",esc(s.run)]);
+  rows.push(["Ganggenauigkeit",esc(s.acc)],["Wasserdichtigkeit",s.wr+" (Schwimmen ok, kein Tauchen)"],["Anzeige",f.disp]);
+  if(s.back) rows.push(["Gehäuseboden",esc(s.back)]);
+  return {rows,fi};
+}
+function openDetail(id,vi){
+  const f=byId(id); if(vi!=null) f.sel=vi; const v=f.vars[f.sel];
+  const {rows,fi}=specRows(f,v);
+  dlg.innerHTML=`<div class="mwrap">
+   <div class="mgal"><div class="main"><img id="mainimg" src="${imgURL(v.dir,v.imgs[0],"main-visual-sp")}" alt="${esc(v.code)}"></div>
+     <div class="thumbs">${v.imgs.map((im,i)=>`<button data-im="${i}" aria-pressed="${i===0}"><img src="${imgURL(v.dir,im,"product-panel")}" alt="" onerror="this.parentNode.remove()"></button>`).join("")}</div>
+     <a class="btn" style="align-self:flex-start" href="https://www.casio.com/de/watches/edifice/product.${v.code}/" target="_blank" rel="noopener">Bei Casio ansehen ↗</a></div>
+   <div class="minfo"><button class="close" aria-label="Schließen">×</button>
+     <div class="eyebrow">${esc(f.t)}</div><h2>${esc(f.n)}</h2>
+     <p class="ben" style="margin-top:8px">${esc(f.ben)}</p>
+     <button class="btn heartbtn" id="mfav" style="margin-top:12px" aria-pressed="${isFav(v.code)}">${isFav(v.code)?"♥ "+esc(v.code)+" gemerkt":"♡ "+esc(v.code)+" merken"}</button>
+     <h4>${f.vars.length} Farbvariante${f.vars.length>1?"n":""}</h4>
+     <div class="vlist">${f.vars.map((x,i)=>`<button class="vbtn" data-vi="${i}" aria-pressed="${i===f.sel}"><span class="dot" style="background:${cHex(x.face)}"></span><span><b>${esc(x.code)}</b>${isFav(x.code)?' <span style="color:var(--accent)" title="gemerkt">♥</span>':""}<br><small>${cName(x.face)} · ${esc(x.spec.band.replace(" (Faltschließe)",""))}${x.spec.fin?" · "+esc(x.spec.fin):""}</small></span><span class="num">${x.price?fmtP(x.price):"–"}${(x.out||!x.price)?'<br><small class="stock no">ausverkauft</small>':""}</span></button>`).join("")}</div>
+     <div class="fit"><b>Handgelenk:</b><span>${fi[1]} – ${fi[2]} (Faustregel nach L = ${mm(v.spec.s[0])} mm)</span></div>
+     <h4>Datenblatt ${esc(v.code)}</h4>
+     <table class="spec"><tbody>${rows.map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join("")}</tbody></table>
+     <h4>Funktionen</h4><ul class="fn">${f.fn.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+   </div></div>`;
+  if(!dlg.open) dlg.showModal();
+  dlg.querySelector(".close").onclick=()=>dlg.close();
+  dlg.querySelector("#mfav").onclick=()=>{ toggleFav(v.code); render(); openDetail(id,f.sel); };
+  dlg.querySelectorAll(".vbtn").forEach(b=>b.onclick=()=>{openDetail(id,+b.dataset.vi); syncCard(f);});
+  dlg.querySelectorAll(".thumbs button").forEach(b=>b.onclick=()=>{dlg.querySelectorAll(".thumbs button").forEach(x=>x.setAttribute("aria-pressed",x===b)); document.getElementById("mainimg").src=imgURL(v.dir,v.imgs[+b.dataset.im],"main-visual-sp");});
+}
+dlg.addEventListener("click",e=>{ if(e.target===dlg) dlg.close(); });
+function syncCard(f){ if(tab==="fav"){ render(); return; } const el=document.querySelector(`.card[data-id="${f.id}"]`); if(el) el.outerHTML=card(f); }
+
+// ---- Vergleich
+const cdlg=document.getElementById("cdlg");
+function updCbar(){ const bar=document.getElementById("cbar"); bar.classList.toggle("show",cmp.size>0); document.getElementById("cnames").textContent=`${cmp.size}/4: `+[...cmp].map(id=>byId(id).n).join(", "); }
+function openCompare(){
+  const fs=[...cmp].map(byId);
+  const R=[["Bild",f=>`<img src="${imgURL(f.vars[f.sel].dir,f.vars[f.sel].imgs[0],"product-panel")}" alt="">`],["Gewählte Farbe",f=>esc(f.vars[f.sel].code)],["Preis",f=>f.vars[f.sel].price?fmtP(f.vars[f.sel].price):"ausverkauft"],["Werk",f=>f.mv],["Art",f=>esc(f.t)],["Ø / L / H",f=>{const s=f.vars[f.sel].spec.s;return `${mm(s[1])} / ${mm(s[0])} / ${mm(s[2])} mm`}],["Gewicht",f=>f.vars[f.sel].spec.w+" g"],["Glas",f=>esc(f.vars[f.sel].spec.gl)],["Armband",f=>esc(f.vars[f.sel].spec.band)],["Handgelenk",f=>fit(f.vars[f.sel].spec.s[0])[1]],["Energie",f=>esc(f.vars[f.sel].spec.pow)],["Genauigkeit",f=>esc(f.vars[f.sel].spec.acc)],["Bluetooth",f=>f.bt?"ja":"nein"],["Farben",f=>f.vars.length],["Funktionen",f=>f.fn.map(esc).join("<br>")],["Benefit",f=>esc(f.ben)]];
+  cdlg.innerHTML=`<div class="ctable"><button class="close" aria-label="Schließen">×</button><h2 class="disp" style="margin:0 0 14px">Vergleich</h2><table><thead><tr><th></th>${fs.map(f=>`<th><span class="disp" style="font-size:18px">${esc(f.n)}</span></th>`).join("")}</tr></thead><tbody>${R.map(([l,fn])=>`<tr><th>${l}</th>${fs.map(f=>`<td>${fn(f)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  cdlg.showModal(); cdlg.querySelector(".close").onclick=()=>cdlg.close();
+}
+cdlg.addEventListener("click",e=>{ if(e.target===cdlg) cdlg.close(); });
+document.getElementById("cgo").onclick=openCompare;
+document.getElementById("cclr").onclick=()=>{cmp.clear(); updCbar(); render();};
+
+// ---- Events
+document.getElementById("grid").addEventListener("click",e=>{
+  const hb=e.target.closest("[data-fav]");
+  if(hb){ toggleFav(hb.dataset.fav); render(); return; }
+  const sw=e.target.closest(".sw button");
+  if(sw){ const f=byId(sw.closest(".sw").dataset.sw); f.sel=+sw.dataset.i; syncCard(f); return; }
+  const op=e.target.closest("[data-open]"); if(op){ openDetail(op.dataset.open,op.dataset.ovi!=null?+op.dataset.ovi:null); return; }
+  const c=e.target.closest("[data-cmp]");
+  if(c){ const id=c.dataset.cmp; if(cmp.has(id)) cmp.delete(id); else if(cmp.size<4) cmp.add(id); else { alertBar(); return; } updCbar(); syncCard(byId(id)); }
+});
+function alertBar(){ const n=document.getElementById("cnames"); const t=n.textContent; n.textContent="Maximal 4 Uhren vergleichen"; setTimeout(()=>n.textContent=t,1600); }
+document.getElementById("fbtn").onclick=e=>{const o=document.getElementById("filters").classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded",o);};
+document.getElementById("q").oninput=e=>{st.q=e.target.value.trim().toLowerCase(); render();};
+document.getElementById("mv").onclick=e=>{const b=e.target.closest("button"); if(!b) return; st.mv=b.dataset.v; document.querySelectorAll("#mv button").forEach(x=>x.setAttribute("aria-pressed",x===b)); render();};
+for(const [id,k] of [["typ","typ"],["size","size"],["wrist","wrist"],["sort","sort"]]) document.getElementById(id).onchange=e=>{st[k]=e.target.value; render();};
+for(const [id,k] of [["fbt","bt"],["fsg","sg"],["favail","avail"]]) document.getElementById(id).onchange=e=>{st[k]=e.target.checked; render();};
+updFavN();
+render();
+</script>
+
+</body>
+</html>
